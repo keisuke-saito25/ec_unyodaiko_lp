@@ -5,8 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
-  initHamburger();
-  initStickyFooter();
+  initReadingProgress();
+  initMobileNav();
   initFAQ();
   initScrollAnimations();
   initParticles();
@@ -37,48 +37,58 @@ function initHeader() {
 
 
 /* ========================================
-   ハンバーガーメニュー
+   読了プログレスバー
    ======================================== */
-function initHamburger() {
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('header-nav');
-  if (!hamburger || !nav) return;
+function initReadingProgress() {
+  const bar = document.getElementById('reading-progress-bar');
+  if (!bar) return;
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${Math.min(progress, 100)}%`;
+  };
 
-  // ナビリンク押下時にメニューを閉じる
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      nav.classList.remove('active');
-    });
-  });
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
 }
 
 
 /* ========================================
-   スティッキーフッター（モバイル）
-   フォームが画面内に入ったら非表示
+   モバイル固定ナビ：アクティブセクション追従
    ======================================== */
-function initStickyFooter() {
-  const footer = document.getElementById('sticky-footer');
-  const formSection = document.getElementById('form');
-  if (!footer || !formSection) return;
+function initMobileNav() {
+  const nav = document.getElementById('mobile-fixed-nav');
+  if (!nav) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        footer.classList.add('hidden');
-      } else {
-        footer.classList.remove('hidden');
+  const links = nav.querySelectorAll('a[href^="#"]:not(.mobile-nav-cta)');
+  const sections = [];
+
+  links.forEach(link => {
+    const id = link.getAttribute('href').substring(1);
+    const section = document.getElementById(id);
+    if (section) sections.push({ link, section });
+  });
+
+  const updateActive = () => {
+    const scrollPos = window.scrollY + 200;
+    let activeLink = null;
+
+    sections.forEach(({ link, section }) => {
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
+        activeLink = link;
       }
     });
-  }, { threshold: 0.1 });
 
-  observer.observe(formSection);
+    links.forEach(l => l.classList.remove('active'));
+    if (activeLink) activeLink.classList.add('active');
+  };
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
 }
 
 
@@ -214,10 +224,24 @@ function initForm() {
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
   const successEl = document.getElementById('form-success');
+  const privacyCheckbox = document.getElementById('privacy-agree');
   if (!form || !submitBtn || !successEl) return;
+
+  // プライバシーポリシー同意チェックボックスの連動
+  if (privacyCheckbox) {
+    privacyCheckbox.addEventListener('change', () => {
+      submitBtn.disabled = !privacyCheckbox.checked;
+    });
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // プライバシーポリシー同意チェック
+    if (privacyCheckbox && !privacyCheckbox.checked) {
+      alert('個人情報の取り扱いに同意してください。');
+      return;
+    }
 
     // バリデーション
     if (!form.checkValidity()) {
@@ -283,11 +307,11 @@ function initStepForm() {
       if (currentStep && nextStep) {
         currentStep.classList.remove('active');
         nextStep.classList.add('active');
-        // フォームセクションの先頭にスクロール
-        const formSection = document.getElementById('form');
-        if (formSection) {
+        // フォーム本体の先頭にスクロール
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
           const headerHeight = document.getElementById('site-header')?.offsetHeight || 0;
-          const targetPosition = formSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+          const targetPosition = contactForm.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
           window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         }
       }
@@ -303,6 +327,13 @@ function initStepForm() {
       if (currentStep && prevStep) {
         currentStep.classList.remove('active');
         prevStep.classList.add('active');
+        // フォーム本体の先頭にスクロール
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+          const headerHeight = document.getElementById('site-header')?.offsetHeight || 0;
+          const targetPosition = contactForm.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
       }
     });
   });

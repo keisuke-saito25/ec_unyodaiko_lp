@@ -5,13 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RakuUP（ラクアップ）| 楽天市場 運用代行サービス</title>
-  <meta name="description" content="楽天市場の運用を丸ごとお任せ。元楽天ECコンサルタントのプロチームが月額7万円で商品ページ・広告・イベント対策まで代行。食品カテゴリー専門。先着5社限定。">
+  <meta name="description" content="楽天市場の運用を丸ごとお任せ。元楽天ECコンサルタントのプロチームが月額5万円から商品ページ・広告・イベント対策まで代行。食品カテゴリー専門。先着5社限定。">
+
+  <!-- OGP / SNSメタタグ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RakuUP（ラクアップ）| 楽天市場 運用代行サービス">
+  <meta property="og:description" content="元楽天ECコンサルタントのプロチームが月額5万円〜で楽天市場の運用を丸ごと代行。食品カテゴリー専門・先着5社限定。">
+  <meta property="og:image" content="https://keisuke-saito25.github.io/ec_unyodaiko_lp/images/authority-badges.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RakuUP | 楽天市場 運用代行サービス">
+  <meta name="twitter:description" content="月額5万円〜で楽天運用を丸ごとお任せ。食品専門・実績30社超・平均売上500%UP。">
+  <meta name="twitter:image" content="https://keisuke-saito25.github.io/ec_unyodaiko_lp/images/authority-badges.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- 構造化データ (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RakuUP（ラクアップ）",
+    "description": "楽天市場の食品カテゴリー専門 運用代行サービス。商品ページ制作・広告運用・イベント対策まで丸ごと代行。",
+    "url": "https://keisuke-saito25.github.io/ec_unyodaiko_lp/",
+    "priceRange": "月額50,000円～",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "渋谷2丁目21番1号 渋谷ヒカリエ 33F",
+      "addressLocality": "渋谷区",
+      "addressRegion": "東京都",
+      "postalCode": "150-8510",
+      "addressCountry": "JP"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "freeks株式会社"
+    },
+    "areaServed": "JP",
+    "serviceType": "EC運用代行",
+    "offers": {
+      "@type": "Offer",
+      "price": "50000",
+      "priceCurrency": "JPY",
+      "description": "楽天市場 食品カテゴリー専門 運用代行"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -38,18 +86,27 @@
         </ul>
       </nav>
       <a href="#form" class="header-cta btn btn-primary btn-sm">無料の店舗診断を申し込む</a>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
+
+  <!-- モバイル固定ナビゲーション -->
+  <nav class="mobile-fixed-nav" id="mobile-fixed-nav">
+    <a href="#results">実績</a>
+    <a href="#service">サービス</a>
+    <a href="#pricing">料金</a>
+    <a href="#voices">お客様の声</a>
+    <a href="#form" class="mobile-nav-cta">申込み</a>
+  </nav>
+
+  <!-- 読了プログレスバー -->
+  <div class="reading-progress" id="reading-progress">
+    <div class="reading-progress-bar" id="reading-progress-bar"></div>
+  </div>
 
   <!-- ========================================
        モバイルスティッキーフッター
        ======================================== -->
-  <div class="sticky-footer" id="sticky-footer">
-    <a href="#form" class="btn btn-primary btn-block">▶ 今すぐ無料の店舗診断を申し込む</a>
-  </div>
+  <!-- モバイルスティッキーフッター削除（固定ナビに統合済み） -->
 
   <!-- ========================================
        セクション1: ファーストビュー（Hero）【結果】
@@ -104,68 +161,6 @@
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,40 1440,60 L1440,120 L0,120 Z" fill="var(--bg-main)" />
       </svg>
-    </div>
-  </section>
-
-  <!-- ========================================
-       セクション2: 信頼バー【信頼】（新設）
-       ======================================== -->
-  <section class="section section-trust" id="trust">
-    <div class="container">
-      <div class="trust-bar">
-        <div class="trust-badges" data-aos="fade-up">
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">元楽天株式会社<br>ECコンサルタント</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M12 2C6.48 2 2 6 2 10.5c0 3 2 5.5 5 7v4.5l3-2 2 0 2 0 3 2v-4.5c3-1.5 5-4 5-7C22 6 17.52 2 12 2z" />
-                <circle cx="8" cy="10" r="1" />
-                <circle cx="12" cy="8" r="1" />
-                <circle cx="16" cy="10" r="1" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">食品カテゴリー<br>5年間専任</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">支援店舗<br>200社以上</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <rect x="9" y="9" width="6" height="6" />
-                <line x1="9" y1="1" x2="9" y2="4" />
-                <line x1="15" y1="1" x2="15" y2="4" />
-                <line x1="9" y1="20" x2="9" y2="23" />
-                <line x1="15" y1="20" x2="15" y2="23" />
-                <line x1="20" y1="9" x2="23" y2="9" />
-                <line x1="20" y1="14" x2="23" y2="14" />
-                <line x1="1" y1="9" x2="4" y2="9" />
-                <line x1="1" y1="14" x2="4" y2="14" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">AI活用による<br>業務効率化</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -229,6 +224,68 @@
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
             </svg></span>
           <p>他社の代行サービスは<strong>高すぎて手が出ない</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       信頼バー【信頼】（共感の後に配置）
+       ======================================== -->
+  <section class="section section-trust" id="trust">
+    <div class="container">
+      <div class="trust-bar">
+        <div class="trust-badges" data-aos="fade-up">
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">元楽天株式会社<br>ECコンサルタント</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M12 2C6.48 2 2 6 2 10.5c0 3 2 5.5 5 7v4.5l3-2 2 0 2 0 3 2v-4.5c3-1.5 5-4 5-7C22 6 17.52 2 12 2z" />
+                <circle cx="8" cy="10" r="1" />
+                <circle cx="12" cy="8" r="1" />
+                <circle cx="16" cy="10" r="1" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">食品カテゴリー<br>5年間専任</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">支援店舗<br>200社以上</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <line x1="9" y1="1" x2="9" y2="4" />
+                <line x1="15" y1="1" x2="15" y2="4" />
+                <line x1="9" y1="20" x2="9" y2="23" />
+                <line x1="15" y1="20" x2="15" y2="23" />
+                <line x1="20" y1="9" x2="23" y2="9" />
+                <line x1="20" y1="14" x2="23" y2="14" />
+                <line x1="1" y1="9" x2="4" y2="9" />
+                <line x1="1" y1="14" x2="4" y2="14" />
+              </svg>
+            </span>
+            <span class="trust-badge-text">AI活用による<br>業務効率化</span>
+          </div>
         </div>
       </div>
     </div>
@@ -301,6 +358,49 @@
             <p>楽天運用は丸投げ、<strong>本業に専念</strong></p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ブレット（箇条書きベネフィット）セクション
+       ======================================== -->
+  <section class="section section-benefits" id="benefits">
+    <div class="container">
+      <h2 class="section-title">運用代行で手に入る<span class="text-gradient">7つの未来</span></h2>
+      <p class="section-subtitle">「丸投げ」の先にある、あなたの店舗の理想の姿をお伝えします。</p>
+      <div class="benefits-list" data-aos="fade-up">
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>毎月の売上が<strong>右肩上がり</strong>に伸び、安定した収益基盤が手に入る</p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>スーパーSALE・お買い物マラソンの準備に<strong>もう追われない</strong></p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>プロが作る商品ページで<strong>転換率が劇的に改善</strong>する方法とは…</p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>広告費を<strong>半分以下に抑えながら</strong>売上を伸ばす仕組みが完成する</p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>定期購入・リピーターが増え、<strong>毎月の売上予測が立つ</strong>ようになる</p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>本業（仕入れ・製造・開発）に<strong>週20時間以上</strong>集中できるようになる</p>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">✓</span>
+          <p>楽天のルール変更やアルゴリズム変動に<strong>振り回されなくなる</strong>秘密</p>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#form" class="btn btn-primary btn-lg">▶ 無料の店舗診断を申し込む</a>
       </div>
     </div>
   </section>
@@ -480,42 +580,86 @@
       <p class="section-subtitle">アドバイスだけではありません。全ての施策をプロが実行・代行します。</p>
       <div class="service-grid">
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">📊</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+              <rect x="2" y="2" width="20" height="20" rx="2" opacity="0" />
+            </svg></div>
           <h3>市場・競合分析</h3>
           <p>市場トレンド把握、競合店舗の価格・施策調査を毎月実施</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">📈</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg></div>
           <h3>店舗分析</h3>
           <p>売上・アクセス・転換率のデータ分析と改善施策の実行</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">🎯</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="3" />
+              <line x1="12" y1="2" x2="12" y2="5" />
+              <line x1="12" y1="19" x2="12" y2="22" />
+            </svg></div>
           <h3>戦略策定・実行</h3>
           <p>月次の販売戦略立案と全施策の一貫した実行まで対応</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">💰</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg></div>
           <h3>広告運用</h3>
           <p>RPP・CPA広告の設定・最適化・ROAS改善を全て代行</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">🎨</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z" />
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+              <path d="M2 2l7.586 7.586" />
+              <circle cx="11" cy="11" r="2" />
+            </svg></div>
           <h3>画像・ページ制作</h3>
           <p>サムネイル、バナー、商品ページLPの作成・更新を代行</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">📱</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg></div>
           <h3>LINE運用</h3>
           <p>友だち獲得施策、配信設計、クーポン施策まで一括対応</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">🎪</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+              <path d="M8 14h.01" />
+              <path d="M12 14h.01" />
+              <path d="M16 14h.01" />
+              <path d="M8 18h.01" />
+              <path d="M12 18h.01" />
+            </svg></div>
           <h3>イベント対応</h3>
           <p>スーパーSALE・お買い物マラソンの企画〜当日まで完全代行</p>
         </div>
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">💬</div>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg></div>
           <h3>質問無制限</h3>
           <p>チャット・メールでいつでも相談OK。回数制限なし</p>
         </div>
@@ -858,7 +1002,26 @@
   </section>
 
   <!-- ========================================
-       セクション11: なぜ無料で診断するのか？【安心補強】
+       セクション12: 限定性【クロージング】
+       ======================================== -->
+  <section class="section section-urgency" id="urgency">
+    <div class="container">
+      <div class="urgency-box" data-aos="fade-up">
+        <span class="urgency-badge">⚠️ 重要なお知らせ</span>
+        <h2>【重要】先着<span class="urgency-number">5社</span>限定の運用代行枠です</h2>
+        <p class="urgency-reason">1店舗あたり月最低30時間の運用工数を確保するため、品質維持の観点から同時対応は5社が限界です。</p>
+        <div class="urgency-remaining">
+          <span class="remaining-label">現在の残り枠</span>
+          <span class="remaining-number">2社</span>
+        </div>
+        <p class="urgency-note">定員に達し次第、予告なく募集終了。次回募集は未定です。</p>
+        <a href="#form" class="btn btn-primary btn-lg btn-glow">▶ 今すぐ無料の店舗診断を申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       なぜ無料で診断するのか？【安心補強】（フォーム直前に配置）
        ======================================== -->
   <section class="section section-why-free" id="why-free">
     <div class="container">
@@ -889,42 +1052,35 @@
       </div>
       <div class="guarantee-badges">
         <div class="guarantee-badge">
-          <span class="guarantee-icon">🔒</span>
+          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg></span>
           <span>無料診断に費用請求は一切なし</span>
         </div>
         <div class="guarantee-badge">
-          <span class="guarantee-icon">🔒</span>
+          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg></span>
           <span>無理な営業・勧誘は一切なし</span>
         </div>
         <div class="guarantee-badge">
-          <span class="guarantee-icon">🔒</span>
-          <span>診断後に契約を強要することは一切ありません</span>
+          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg></span>
+          <span>診断後の契約強要は一切なし</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       セクション12: 限定性【クロージング】
-       ======================================== -->
-  <section class="section section-urgency" id="urgency">
-    <div class="container">
-      <div class="urgency-box" data-aos="fade-up">
-        <span class="urgency-badge">⚠️ 重要なお知らせ</span>
-        <h2>【重要】先着<span class="urgency-number">5社</span>限定の運用代行枠です</h2>
-        <p class="urgency-reason">1店舗あたり月最低30時間の運用工数を確保するため、品質維持の観点から同時対応は5社が限界です。</p>
-        <div class="urgency-remaining">
-          <span class="remaining-label">現在の残り枠</span>
-          <span class="remaining-number">2社</span>
-        </div>
-        <p class="urgency-note">定員に達し次第、予告なく募集終了。次回募集は未定です。</p>
-        <a href="#form" class="btn btn-primary btn-lg btn-glow">▶ 今すぐ無料の店舗診断を申し込む</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       セクション13: 申込フォーム【ステップ化】
+       申込フォーム【ステップ化】
        ======================================== -->
   <section class="section section-form" id="form">
     <div class="container">
@@ -948,6 +1104,7 @@
       </div>
 
       <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: Web3Formsで取得したアクセスキーを設定してください https://web3forms.com/ -->
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
         <input type="hidden" name="subject" value="【RakuUP】無料店舗診断のお申し込み">
         <input type="hidden" name="from_name" value="RakuUP LP">
@@ -1049,12 +1206,35 @@
             </div>
 
             <div class="form-privacy">
-              <p>🔒 個人情報は厳重に管理し、無料診断以外の目的で使用しません</p>
+              <details class="privacy-details">
+                <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14"
+                    height="14" style="vertical-align:-2px">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg> 個人情報の取り扱いについて</summary>
+                <div class="privacy-content">
+                  <p>当社は、本フォームでご提供いただいた個人情報を以下の通り取り扱います。</p>
+                  <ul>
+                    <li><strong>利用目的：</strong>無料店舗診断のご連絡・サービスのご案内のみに使用します</li>
+                    <li><strong>第三者提供：</strong>お客様の同意なく第三者へ提供することはありません</li>
+                    <li><strong>業務委託先：</strong>フォーム送信にWeb3Forms（外部サービス）を利用しています。送信データは同サービスを経由して当社に届きます</li>
+                    <li><strong>安全管理：</strong>適切なセキュリティ対策を講じ、不正アクセス・漏洩を防止します</li>
+                    <li><strong>開示・削除：</strong>ご本人からの請求に基づき、情報の開示・訂正・削除に応じます</li>
+                  </ul>
+                  <p><strong>個人情報保護管理者：</strong>freeks株式会社 代表取締役 篠竹 将太朗</p>
+                  <p>詳細は<a href="privacy.html" target="_blank">プライバシーポリシー全文</a>をご確認ください。</p>
+                  <p>お問い合わせ：<a href="mailto:info@freeks.co.jp">info@freeks.co.jp</a></p>
+                </div>
+              </details>
+              <label class="privacy-agree-label">
+                <input type="checkbox" id="privacy-agree" required>
+                <span>上記の個人情報の取り扱いに同意する <span class="required">必須</span></span>
+              </label>
             </div>
 
             <div class="step-btn-row">
               <button type="button" class="btn btn-outline step-prev-btn" data-prev="2">← 戻る</button>
-              <button type="submit" class="btn btn-primary btn-lg btn-glow" id="submit-btn">
+              <button type="submit" class="btn btn-primary btn-lg btn-glow" id="submit-btn" disabled>
                 ▶ 無料の店舗診断を申し込む
               </button>
             </div>
@@ -1071,10 +1251,79 @@
     </div>
   </section>
 
-
   <!-- ========================================
-       フッター（会社情報充実）
+       特定商取引法に基づく表記
        ======================================== -->
+  <section class="section section-legal" id="legal">
+    <div class="container">
+      <details class="legal-details" data-aos="fade-up">
+        <summary class="legal-summary">特定商取引法に基づく表記</summary>
+        <div class="legal-content">
+          <table class="legal-table">
+            <tr>
+              <th>販売事業者</th>
+              <td>freeks株式会社</td>
+            </tr>
+            <tr>
+              <th>運営責任者</th>
+              <td>代表取締役 篠竹 将太朗</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒150-8510 東京都渋谷区渋谷2丁目21番1号 渋谷ヒカリエ 33F</td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td>お問い合わせいただければ遅滞なくお知らせいたします</td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>info@freeks.co.jp</td>
+            </tr>
+            <tr>
+              <th>サービス内容</th>
+              <td>楽天市場 運用代行サービス（店舗分析・商品ページ制作・広告運用・イベント対応等）</td>
+            </tr>
+            <tr>
+              <th>サービスの対価</th>
+              <td>月額50,000円（税別）〜 ※店舗の月商に応じた売上連動・ステップアップ型の料金体系です。詳細は料金プランをご確認ください。上記金額に消費税が別途かかります。振込手数料はお客様のご負担となります。
+              </td>
+            </tr>
+            <tr>
+              <th>お支払い方法</th>
+              <td>銀行振込</td>
+            </tr>
+            <tr>
+              <th>お支払い時期</th>
+              <td>契約月の翌月末日まで</td>
+            </tr>
+            <tr>
+              <th>サービス提供の開始時期</th>
+              <td>契約締結後、7営業日以内に運用を開始いたします</td>
+            </tr>
+            <tr>
+              <th>契約期間</th>
+              <td>縛りなし・いつでも解約可能</td>
+            </tr>
+            <tr>
+              <th>キャンセル・解約</th>
+              <td>解約希望月の前月末日までにメールまたは書面でご連絡ください。中途解約の場合、当月分の料金は日割り計算での返金はいたしかねます。</td>
+            </tr>
+            <tr>
+              <th>返金について</th>
+              <td>通信販売のため、クーリングオフ制度の適用対象外です。契約前の無料店舗診断には一切費用は発生しません。</td>
+            </tr>
+            <tr>
+              <th>特記事項</th>
+              <td>無料店舗診断に同意いただいた後、契約を強要することは一切ございません。掲載の成果事例は個別の実績であり、全てのお客様に同等の結果を保証するものではありません。</td>
+            </tr>
+          </table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -1082,13 +1331,36 @@
           <span class="logo-mark">Raku<span class="logo-accent">UP</span></span>
           <span class="footer-desc">楽天市場 食品カテゴリー専門 運用代行サービス</span>
         </div>
-        <div class="footer-info">
-          <p>運営：freeks株式会社</p>
-          <p>〒150-8510 東京都渋谷区渋谷2丁目21番1号 渋谷ヒカリエ 33F</p>
+        <div class="footer-company">
+          <h4>運営会社情報</h4>
+          <table class="footer-company-table">
+            <tr>
+              <th>会社名</th>
+              <td>freeks株式会社</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒150-8510 東京都渋谷区渋谷2丁目21番1号 渋谷ヒカリエ 33F</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>EC運用代行・コンサルティング・エンジニアリング事業</td>
+            </tr>
+            <tr>
+              <th>お問い合わせ</th>
+              <td><a href="mailto:info@freeks.co.jp">info@freeks.co.jp</a></td>
+            </tr>
+          </table>
         </div>
+      </div>
+      <div class="footer-links">
+        <a href="#legal">特定商取引法に基づく表記</a>
+        <span class="footer-link-sep">|</span>
+        <a href="privacy.html">プライバシーポリシー</a>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 RakuUP All Rights Reserved.</p>
+        <p class="footer-disclaimer">※ 掲載の成果事例は個別の実績であり、全てのお客様に同等の結果を保証するものではありません。</p>
       </div>
     </div>
   </footer>
