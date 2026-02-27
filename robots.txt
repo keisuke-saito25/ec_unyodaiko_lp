@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keisuke-saito25.github.io/ec_unyodaiko_lp/sitemap.xml
