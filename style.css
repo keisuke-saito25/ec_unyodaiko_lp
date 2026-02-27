@@ -463,6 +463,7 @@ ol {
 .hero {
   position: relative;
   background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.85)), url('images/hero-bg.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.85)), image-set(url('images/hero-bg.webp') type('image/webp'), url('images/hero-bg.jpg') type('image/jpeg')) center / cover no-repeat;
   color: var(--text-white);
   padding: 140px 0 100px;
   overflow: hidden;
@@ -2994,6 +2995,7 @@ ol {
     padding: 150px 0 80px;
     min-height: auto;
     background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.85)), url('images/hero-bg-sp.jpg') center / cover no-repeat;
+    background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.85)), image-set(url('images/hero-bg-sp.webp') type('image/webp'), url('images/hero-bg-sp.jpg') type('image/jpeg')) center / cover no-repeat;
   }
 
   .hero-headline {

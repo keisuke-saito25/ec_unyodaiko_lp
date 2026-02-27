@@ -4,6 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics (GA4) -->
+  <!-- TODO: G-XXXXXXXXXX を実際の GA4 測定IDに差し替えてください -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <title>RakuUP（ラクアップ）| 楽天市場 運用代行サービス</title>
   <meta name="description" content="楽天市場の運用を丸ごとお任せ。元楽天ECコンサルタントのプロチームが月額5万円から商品ページ・広告・イベント対策まで代行。食品カテゴリー専門。先着5社限定。">
   <link rel="canonical" href="https://keisuke-saito25.github.io/ec_unyodaiko_lp/">
@@ -29,7 +40,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.min.css">
 
   <!-- 構造化データ (JSON-LD) -->
   <script type="application/ld+json">
@@ -123,7 +134,10 @@
           <span class="badge badge-urgent">🔥 先着5社限定・残り枠わずか</span>
         </div>
         <div class="hero-authority-badges">
-          <img src="images/authority-badges.png" alt="食品EC専門・楽天運用実績30社+・平均売上500%UP" loading="lazy">
+          <picture>
+            <source srcset="images/authority-badges.webp" type="image/webp">
+            <img src="images/authority-badges.png" alt="食品EC専門・楽天運用実績30社+・平均売上500%UP" loading="lazy">
+          </picture>
         </div>
         <p class="hero-target">楽天市場の食品店舗オーナー様へ</p>
         <p class="hero-insight">「やることが多すぎて、もう限界…」</p>
@@ -420,7 +434,10 @@
             <span class="case-category">梅干し専門店（九州）</span>
           </div>
           <div class="case-image">
-            <img src="images/case01.jpg" alt="梅干し専門店の商品イメージ" loading="lazy">
+            <picture>
+              <source srcset="images/case01.webp" type="image/webp">
+              <img src="images/case01.jpg" alt="梅干し専門店の商品イメージ" loading="lazy">
+            </picture>
           </div>
           <div class="case-metrics">
             <div class="case-before">
@@ -449,7 +466,10 @@
             <span class="case-category">こんにゃく・もつ煮の専門店（関東）</span>
           </div>
           <div class="case-image">
-            <img src="images/case02.jpg" alt="こんにゃく・もつ煮の商品イメージ" loading="lazy">
+            <picture>
+              <source srcset="images/case02.webp" type="image/webp">
+              <img src="images/case02.jpg" alt="こんにゃく・もつ煮の商品イメージ" loading="lazy">
+            </picture>
           </div>
           <div class="case-metrics">
             <div class="case-before">
@@ -478,7 +498,10 @@
             <span class="case-category">お茶専門店（中部）</span>
           </div>
           <div class="case-image">
-            <img src="images/case03.jpg" alt="お茶専門店の商品イメージ" loading="lazy">
+            <picture>
+              <source srcset="images/case03.webp" type="image/webp">
+              <img src="images/case03.jpg" alt="お茶専門店の商品イメージ" loading="lazy">
+            </picture>
           </div>
           <div class="case-metrics">
             <div class="case-before">
@@ -503,7 +526,10 @@
       </div>
       <div class="cases-graph" data-aos="fade-up">
         <h3 class="cases-graph-title">📈 実際の売上推移（イメージ）</h3>
-        <img src="images/sales-graph.png" alt="売上推移グラフ" class="cases-graph-image" loading="lazy">
+        <picture>
+          <source srcset="images/sales-graph.webp" type="image/webp">
+          <img src="images/sales-graph.png" alt="売上推移グラフ" class="cases-graph-image" loading="lazy">
+        </picture>
       </div>
       <div class="cases-summary">
         <div class="summary-item">
@@ -531,7 +557,11 @@
       <div class="voices-grid">
         <div class="voice-card" data-aos="fade-up">
           <div class="voice-header">
-            <div class="voice-avatar"><img src="images/avatar-a.png" alt="Aさん"></div>
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-a.webp" type="image/webp"><img src="images/avatar-a.png" alt="Aさん">
+              </picture>
+            </div>
             <div class="voice-meta">
               <span class="voice-name">梅干し専門店・Aさん</span>
               <span class="voice-info">九州・従業員3名 / 導入6か月</span>
@@ -544,7 +574,11 @@
         </div>
         <div class="voice-card" data-aos="fade-up">
           <div class="voice-header">
-            <div class="voice-avatar"><img src="images/avatar-b.png" alt="Bさん"></div>
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-b.webp" type="image/webp"><img src="images/avatar-b.png" alt="Bさん">
+              </picture>
+            </div>
             <div class="voice-meta">
               <span class="voice-name">お茶専門店・Bさん</span>
               <span class="voice-info">中部・個人事業主 / 導入8か月</span>
@@ -557,7 +591,11 @@
         </div>
         <div class="voice-card" data-aos="fade-up">
           <div class="voice-header">
-            <div class="voice-avatar"><img src="images/avatar-c.png" alt="Cさん"></div>
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-c.webp" type="image/webp"><img src="images/avatar-c.png" alt="Cさん">
+              </picture>
+            </div>
             <div class="voice-meta">
               <span class="voice-name">もつ煮専門店・Cさん</span>
               <span class="voice-info">関東・夫婦で運営 / 導入4か月</span>
@@ -680,7 +718,10 @@
                   class="sp-only">汎用的な代行会社とは異なり、食品ジャンルの成功パターンを熟知しています。
               </p>
             </div>
-            <img src="images/team-working.png" alt="専門チームの作業イメージ" class="reason-image" loading="lazy">
+            <picture>
+              <source srcset="images/team-working.webp" type="image/webp">
+              <img src="images/team-working.png" alt="専門チームの作業イメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
         </div>
         <div class="reason-card reason-card-with-image" data-aos="fade-up">
@@ -691,7 +732,10 @@
               <p>大手EC代行会社は<strong>月額50万円〜</strong>。社員を雇用すれば<strong>月額30万円〜</strong>（社保含む）。<br
                   class="sp-only">当サービスはAI活用による業務効率化で<strong class="text-price-inline">月額5万円〜</strong>を実現。</p>
             </div>
-            <img src="images/reason-cost.png" alt="コスト比較イメージ" class="reason-image" loading="lazy">
+            <picture>
+              <source srcset="images/reason-cost.webp" type="image/webp">
+              <img src="images/reason-cost.png" alt="コスト比較イメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
         </div>
         <div class="reason-card reason-card-with-image" data-aos="fade-up">
@@ -702,7 +746,10 @@
               <p>戦略立案から施策の実行まで一貫して代行。週次で進捗を報告、質問はいつでも無制限に対応。<br
                   class="sp-only"><strong>「やってください」と言うだけ。あとはプロにお任せ。</strong></p>
             </div>
-            <img src="images/reason-support.png" alt="完全伴走サポートイメージ" class="reason-image" loading="lazy">
+            <picture>
+              <source srcset="images/reason-support.webp" type="image/webp">
+              <img src="images/reason-support.png" alt="完全伴走サポートイメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -879,7 +926,10 @@
                 <li>店舗の現状を独自ノウハウで分析</li>
                 <li>業界平均・競合との比較レポートをお渡し</li>
               </ul>
-              <img src="images/flow-step1.png" alt="店舗診断イメージ" class="flow-step-image" loading="lazy">
+              <picture>
+                <source srcset="images/flow-step1.webp" type="image/webp">
+                <img src="images/flow-step1.png" alt="店舗診断イメージ" class="flow-step-image" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
@@ -897,7 +947,10 @@
                 <li>何をどう変えるか、期待効果、優先順位を明示</li>
                 <li>ご納得いただけなければ、ここで終了してOK</li>
               </ul>
-              <img src="images/flow-step2.png" alt="改善プラン提案イメージ" class="flow-step-image" loading="lazy">
+              <picture>
+                <source srcset="images/flow-step2.webp" type="image/webp">
+                <img src="images/flow-step2.png" alt="改善プラン提案イメージ" class="flow-step-image" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
@@ -915,7 +968,10 @@
                 <li>週次で進捗報告、いつでもチャットで質問OK</li>
                 <li><strong>最短2か月</strong>で成果を実感</li>
               </ul>
-              <img src="images/service-mockup.png" alt="楽天市場の運用イメージ" class="flow-step-image" loading="lazy">
+              <picture>
+                <source srcset="images/service-mockup.webp" type="image/webp">
+                <img src="images/service-mockup.png" alt="楽天市場の運用イメージ" class="flow-step-image" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
@@ -1095,7 +1151,10 @@
       <!-- 診断で分かること（マイクロコピー） -->
       <div class="form-benefits-with-image" data-aos="fade-up">
         <div class="form-benefits-image">
-          <img src="images/diagnostic-report.png" alt="無料店舗診断レポートのイメージ" loading="lazy">
+          <picture>
+            <source srcset="images/diagnostic-report.webp" type="image/webp">
+            <img src="images/diagnostic-report.png" alt="無料店舗診断レポートのイメージ" loading="lazy">
+          </picture>
         </div>
         <div class="form-benefits">
           <h3>📋 無料診断で分かる3つのこと</h3>
@@ -1349,7 +1408,7 @@
       </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.min.js"></script>
 </body>
 
 </html>

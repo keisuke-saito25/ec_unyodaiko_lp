@@ -262,6 +262,17 @@ function initForm() {
 
       if (response.ok) {
         // 送信成功
+
+        // GA4 コンバージョンイベント送信
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'form',
+            event_label: 'free_diagnosis',
+            monthly_sales: formData.get('monthly_sales') || '',
+            desired_services: formData.getAll('desired_services[]').join(', ') || ''
+          });
+        }
+
         form.style.display = 'none';
         successEl.style.display = 'block';
 
