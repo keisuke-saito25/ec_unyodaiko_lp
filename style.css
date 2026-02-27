@@ -2993,6 +2993,7 @@ ol {
   .hero {
     padding: 150px 0 80px;
     min-height: auto;
+    background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.85)), url('images/hero-bg-sp.jpg') center / cover no-repeat;
   }
 
   .hero-headline {
