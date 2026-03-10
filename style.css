@@ -106,6 +106,10 @@ ol {
   display: none;
 }
 
+.pc-only {
+  display: inline;
+}
+
 /* ========================================
    共通コンポーネント
    ======================================== */
@@ -1067,6 +1071,7 @@ ol {
   font-size: 1.2rem;
   color: var(--primary);
   font-weight: 700;
+  padding-top: 24px;
 }
 
 .case-badge {
@@ -3010,6 +3015,10 @@ ol {
     display: inline;
   }
 
+  .pc-only {
+    display: none;
+  }
+
   /* ヘッダー */
   .header-nav {
     display: none;
@@ -3068,6 +3077,12 @@ ol {
   .btn-lg {
     padding: 16px 28px;
     font-size: 1rem;
+  }
+
+  .btn-xl {
+    padding: 16px 24px;
+    font-size: 1rem;
+    letter-spacing: 0;
   }
 
   /* セクションタイトル */
