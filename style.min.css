@@ -2157,7 +2157,16 @@ ul {
 
 .form-success {
     text-align: center;
-    padding: 60px 20px
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1
 }
 
 .success-icon {
@@ -2169,12 +2178,12 @@ ul {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 12px;
-    color: var(--text-primary)
+    color: var(--text-white)
 }
 
 .form-success p {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, .85);
     line-height: 1.8
 }
 
