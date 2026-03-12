@@ -273,11 +273,10 @@ function initForm() {
           });
         }
 
-        form.style.display = 'none';
-        successEl.style.display = 'block';
-
-        // 成功メッセージにスクロール
-        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // GA4イベント送信を確実にするため少し待ってからリダイレクト
+        setTimeout(() => {
+          window.location.href = 'thanks.html';
+        }, 500);
       } else {
         throw new Error('送信に失敗しました');
       }
