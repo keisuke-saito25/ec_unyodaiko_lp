@@ -1186,7 +1186,7 @@
             <h3 class="step-form-heading">STEP 1 <small>まずは1問だけ</small></h3>
             <div class="form-group">
               <label for="monthly-sales">現在の月商を教えてください <span class="required">必須</span></label>
-              <select id="monthly-sales" name="月商規模" required>
+              <select id="monthly-sales" name="monthly_sales" required>
                 <option value="" disabled selected>選択してください</option>
                 <option value="49万円以下">49万円以下</option>
                 <option value="50万〜99万">50万〜99万円</option>
@@ -1213,19 +1213,19 @@
             <div class="form-group">
               <label>特に代行してほしい業務 <span class="optional">任意・複数選択OK</span></label>
               <div class="checkbox-group">
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="商品ページ制作">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="商品ページ制作">
                   商品ページ制作</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="広告運用">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="広告運用">
                   広告運用</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="イベント対応">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="イベント対応">
                   イベント対応</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="LINE運用">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="LINE運用">
                   LINE運用</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="運用全般">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="運用全般">
                   運用全般</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="コンサルティング">
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="コンサルティング">
                   コンサルティング</label>
-                <label class="checkbox-label"><input type="checkbox" name="代行希望業務[]" value="その他"> その他</label>
+                <label class="checkbox-label"><input type="checkbox" name="desired_services[]" value="その他"> その他</label>
               </div>
             </div>
             <div class="step-btn-row">
@@ -1247,27 +1247,27 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">お名前 <span class="required">必須</span></label>
-                <input type="text" id="name" name="お名前" required placeholder="例：山田 太郎">
+                <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
               </div>
               <div class="form-group">
                 <label for="email">メールアドレス <span class="required">必須</span></label>
-                <input type="email" id="email" name="メールアドレス" required placeholder="例：info@example.com">
+                <input type="email" id="email" name="email" required placeholder="例：info@example.com">
               </div>
               <div class="form-group">
                 <label for="phone">電話番号 <span class="required">必須</span></label>
-                <input type="tel" id="phone" name="電話番号" required placeholder="例：090-1234-5678">
+                <input type="tel" id="phone" name="phone" required placeholder="例：090-1234-5678">
               </div>
               <div class="form-group">
                 <label for="shop-name">店舗名 <span class="required">必須</span></label>
-                <input type="text" id="shop-name" name="店舗名" required placeholder="例：○○食品楽天市場店">
+                <input type="text" id="shop-name" name="shop_name" required placeholder="例：○○食品楽天市場店">
               </div>
               <div class="form-group full-width">
                 <label for="shop-url">楽天店舗URL <span class="optional">任意</span></label>
-                <input type="url" id="shop-url" name="楽天店舗URL" placeholder="例：https://www.rakuten.co.jp/your-shop/">
+                <input type="url" id="shop-url" name="shop_url" placeholder="例：https://www.rakuten.co.jp/your-shop/">
               </div>
               <div class="form-group full-width">
                 <label for="message">ご相談内容 <span class="optional">任意</span></label>
-                <textarea id="message" name="ご相談内容" rows="3" placeholder="現在のお悩みやご相談内容をお気軽にお書きください"></textarea>
+                <textarea id="message" name="message" rows="3" placeholder="現在のお悩みやご相談内容をお気軽にお書きください"></textarea>
               </div>
             </div>
 

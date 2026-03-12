@@ -268,8 +268,8 @@ function initForm() {
           gtag('event', 'generate_lead', {
             event_category: 'form',
             event_label: 'free_diagnosis',
-            monthly_sales: formData.get('月商規模') || '',
-            desired_services: formData.getAll('代行希望業務[]').join(', ') || ''
+            monthly_sales: formData.get('monthly_sales') || '',
+            desired_services: formData.getAll('desired_services[]').join(', ') || ''
           });
         }
 
