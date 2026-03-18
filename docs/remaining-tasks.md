@@ -29,6 +29,7 @@
 ### パフォーマンス最適化・CV計測
 - [x] ページ速度最適化 — CSS圧縮（66KB→48KB、約27%削減）
 - [x] サンクスページ作成 — `thanks.html`（フォーム送信後リダイレクト + 今後の流れ案内）
+- [x] フォーム中間ステップ計測 — `form_start` / `step1_complete` / `step2_complete` イベント追加（Secondary）
 
 ---
 
@@ -37,12 +38,16 @@
 ### 🔴 Google広告出稿に必須
 - [ ] **Google Ads アカウント作成を完了する**
   - https://ads.google.com/ でセットアップウィザードを完了（キャンペーンはスキップ or 一時停止でOK）
+- [ ] **Auto-tagging（自動タグ設定）を有効化する**
+  - Google Ads → 管理 → アカウント設定 → 自動タグ設定 ON
 - [ ] **GA4 と Google Ads をリンクする**
   - GA4 → 管理 → Google Ads のリンク → リンク作成
 - [ ] **Google Ads でコンバージョンをインポートする**
   - Google Ads → ツールと設定 → コンバージョン → インポート → GA4 の `generate_lead` を選択
+  - `generate_lead` を **Primary** に設定（入札最適化に使用）
+  - 中間ステップ（`form_start` / `step1_complete` / `step2_complete`）は **Secondary** に設定
 - [ ] **広告キャンペーンの作成・出稿**
-  - 広告文・キーワード・予算の設計
+  - 詳細は `docs/google-ads-operation-plan.md`（v4: 最終版）を参照
   - ランディングページURLに `https://raku-up.netlify.app/` を設定
 
 ### 🟢 あると望ましい

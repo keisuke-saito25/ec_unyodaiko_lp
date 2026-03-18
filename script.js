@@ -290,13 +290,31 @@ function initForm() {
 
 
 /* ========================================
-   ステップフォーム（3段階）
+   ステップフォーム（3段階）+ GA4 中間ステップ計測
    ======================================== */
 function initStepForm() {
   const nextBtns = document.querySelectorAll('.step-next-btn');
   const prevBtns = document.querySelectorAll('.step-prev-btn');
 
   if (!nextBtns.length) return;
+
+  // form_start イベントの重複発火を防ぐフラグ
+  let formStartFired = false;
+
+  // GA4 中間ステップ計測: form_start
+  // STEP 1 のセレクトボックスが初めて変更されたときに発火
+  const monthlySalesSelect = document.getElementById('monthly-sales');
+  if (monthlySalesSelect) {
+    monthlySalesSelect.addEventListener('change', () => {
+      if (!formStartFired && typeof gtag === 'function') {
+        gtag('event', 'form_start', {
+          event_category: 'form',
+          event_label: 'free_diagnosis'
+        });
+        formStartFired = true;
+      }
+    });
+  }
 
   nextBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -315,6 +333,26 @@ function initStepForm() {
       }
 
       if (currentStep && nextStep) {
+        // GA4 中間ステップ計測: step1_complete / step2_complete
+        if (typeof gtag === 'function') {
+          if (currentStep.id === 'step-1') {
+            gtag('event', 'step1_complete', {
+              event_category: 'form',
+              event_label: 'monthly_sales_selected',
+              monthly_sales: monthlySalesSelect ? monthlySalesSelect.value : ''
+            });
+          } else if (currentStep.id === 'step-2') {
+            const checkedServices = Array.from(
+              currentStep.querySelectorAll('input[name="desired_services[]"]:checked')
+            ).map(cb => cb.value);
+            gtag('event', 'step2_complete', {
+              event_category: 'form',
+              event_label: 'desired_services_selected',
+              desired_services: checkedServices.join(', ') || 'なし'
+            });
+          }
+        }
+
         currentStep.classList.remove('active');
         nextStep.classList.add('active');
         // フォーム本体の先頭にスクロール
