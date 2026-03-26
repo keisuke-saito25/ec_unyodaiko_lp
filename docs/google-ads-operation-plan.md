@@ -2,7 +2,7 @@
 
 > **作成日**: 2026-03-18（v4: 最終版）
 > **サービス**: Raku UP — 楽天市場 食品カテゴリー専門 運用代行
-> **LP URL**: `https://raku-up.netlify.app/`
+> **LP URL**: `https://raku-up.netlify.app/`Agent
 > **目的**: 問い合わせフォームからのリード獲得（無料店舗診断の申し込み）
 
 ---
