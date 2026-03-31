@@ -1,0 +1,2 @@
+# 旧Netlifyサブドメインから独自ドメインへの301リダイレクト
+https://raku-up.netlify.app/* https://rakuup.com/:splat 301!

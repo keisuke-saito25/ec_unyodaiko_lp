@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://raku-up.netlify.app/sitemap.xml
+Sitemap: https://rakuup.com/sitemap.xml
