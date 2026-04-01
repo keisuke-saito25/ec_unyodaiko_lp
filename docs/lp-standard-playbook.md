@@ -1,7 +1,7 @@
 # LP公開 標準手順書
 
 > 作成済みのLPを公開するための手順書。
-> **検証環境: GitHub Pages** / **本番環境: Netlify** の2環境構成。
+> **本番環境: GitHub Pages** （カスタムドメイン `rakuup.com` 設定済み）
 
 ---
 
@@ -9,10 +9,13 @@
 
 | 環境 | サービス | URL | 用途 |
 |---|---|---|---|
-| **検証** | GitHub Pages | `https://keisuke-saito25.github.io/ec_unyodaiko_lp/` | 開発中の確認・レビュー |
-| **本番** | Netlify | `https://raku-up.netlify.app/` | 一般公開（SEO・OGP対象） |
+| **本番** | GitHub Pages | `https://rakuup.com/` | 一般公開（SEO・OGP対象） |
 
-> **注意**: `canonical`・`og:url`・`sitemap.xml` 等のSEOメタ情報は**本番URL（Netlify）**に設定すること。
+> **注意**: `canonical`・`og:url`・`sitemap.xml` 等のSEOメタ情報は**本番URL（`https://rakuup.com/`）**に設定すること。
+
+> **変更履歴**: 2026-04-01 に Netlify（`raku-up.netlify.app`）から GitHub Pages へ移行。
+> Netlify無料プランのクレジット超過によりサイトが停止（Paused）されたため、GitHub Pages に移行。
+> カスタムドメイン `rakuup.com`（ムームードメインで取得）を GitHub Pages に設定。
 
 ---
 
@@ -23,11 +26,12 @@
 | ブランチ | `master` |
 | 必須ファイル | ルート直下に `index.html` |
 | GitHub アカウント | `keisuke-saito25` |
-| Netlify アカウント | GitHub連携で作成（推奨） |
+| リポジトリ | `ec_unyodaiko_lp` |
+| カスタムドメイン | `rakuup.com`（ムームードメインで管理） |
 
 ---
 
-## A. 検証環境（GitHub Pages）
+## A. GitHub Pages 本番環境
 
 ### A-1. Git 初期化・プッシュ
 
@@ -48,54 +52,33 @@ git push -u origin master
 3. Branch: **master** / **/ (root)**
 4. **Save**
 
-### A-3. 確認
+### A-3. カスタムドメイン設定
 
-- 数分後に `https://keisuke-saito25.github.io/<リポジトリ名>/` でアクセス可能
-- 反映まで1〜5分かかる
+1. リポジトリのルートに `CNAME` ファイルを作成（内容: `rakuup.com`）
+2. GitHub Settings → Pages → Custom domain に `rakuup.com` を入力 → **Save**
+3. **Enforce HTTPS** をオンにする
 
----
+### A-4. DNS設定（ムームードメイン）
 
-## B. 本番環境（Netlify）
+ムームードメインのカスタム設定（設定2）で以下を登録：
 
-### B-1. Netlify アカウント作成
+| サブドメイン | 種別 | 内容 |
+|---|---|---|
+| （空） | A | `185.199.108.153` |
+| （空） | A | `185.199.109.153` |
+| （空） | A | `185.199.110.153` |
+| （空） | A | `185.199.111.153` |
+| www | CNAME | `keisuke-saito25.github.io` |
+| （空） | TXT | Google Search Console 認証用（削除しない） |
 
-1. https://app.netlify.com/ にアクセス
-2. 「Sign up」→ **「Sign up with GitHub」** を選択
-3. GitHub アカウントで認証
+### A-5. 確認
 
-### B-2. サイトの作成（GitHub 連携）
-
-1. Netlify ダッシュボードで **「Add new site」** → **「Import an existing project」**
-2. **「Deploy with GitHub」** を選択
-3. 対象リポジトリ（`ec_unyodaiko_lp`）を選択
-4. ビルド設定:
-   - **Branch to deploy**: `master`
-   - **Build command**: （空欄のまま ※静的サイトのため不要）
-   - **Publish directory**: `.`（ルート直下）
-5. **「Deploy site」** をクリック
-
-### B-3. サイト名の変更
-
-デフォルトではランダムな名前が付くため変更する:
-
-1. **Site configuration** → **Site details** → **Change site name**
-2. `raku-up` と入力して保存
-3. → `https://raku-up.netlify.app/` でアクセス可能に
-
-### B-4. デプロイ確認
-
-1. `https://raku-up.netlify.app/` にアクセス
-2. 以下を確認:
-   - [ ] 全セクションが正常表示されるか
-   - [ ] 画像が全て表示されるか
-   - [ ] フォーム送信が動作するか
-   - [ ] SP（スマホ）表示が崩れていないか
-   - [ ] HTTPS/SSL が有効か
-   - [ ] プライバシーポリシーへのリンクが動作するか
+- `https://rakuup.com/` でアクセス可能になるまで待つ（DNS反映: 数分〜数時間）
+- HTTPS が有効であることを確認（SSL証明書の発行に10〜30分かかる場合あり）
 
 ---
 
-## 更新時（共通）
+## 更新時
 
 ```bash
 git add .
@@ -104,71 +87,63 @@ git push
 ```
 
 - **GitHub Pages**: プッシュ後1〜5分で自動反映
-- **Netlify**: プッシュ後1〜2分で自動ビルド・デプロイ
 
 キャッシュが残る場合は `Ctrl+Shift+R`（スーパーリロード）。
 
 ---
 
-## SEO メタ情報の更新
+## SEO メタ情報
 
-本番URL（Netlify）が確定したら、以下のファイルのURLを更新する。
+本番URL（`https://rakuup.com/`）に設定済み。変更時は以下を確認：
 
 ### index.html
 
 ```html
-<!-- 変更箇所 -->
-<link rel="canonical" href="https://raku-up.netlify.app/">
-<meta property="og:url" content="https://raku-up.netlify.app/">
-<meta property="og:image" content="https://raku-up.netlify.app/images/authority-badges.png">
-<meta name="twitter:image" content="https://raku-up.netlify.app/images/authority-badges.png">
+<link rel="canonical" href="https://rakuup.com/">
+<meta property="og:url" content="https://rakuup.com/">
+<meta property="og:image" content="https://rakuup.com/images/authority-badges.png">
+<meta name="twitter:image" content="https://rakuup.com/images/authority-badges.png">
 
 <!-- 構造化データ内 -->
-"url": "https://raku-up.netlify.app/"
+"url": "https://rakuup.com/"
 ```
 
 ### sitemap.xml
 
 ```xml
-<loc>https://raku-up.netlify.app/</loc>
-<loc>https://raku-up.netlify.app/privacy.html</loc>
+<loc>https://rakuup.com/</loc>
+<loc>https://rakuup.com/privacy.html</loc>
 ```
 
 ### robots.txt
 
 ```
-Sitemap: https://raku-up.netlify.app/sitemap.xml
+Sitemap: https://rakuup.com/sitemap.xml
 ```
 
 ---
 
-## カスタムドメイン（任意・将来対応）
+## Google Search Console
 
-### Netlify でのカスタムドメイン設定
-
-1. ドメインを取得（お名前.com / Cloudflare Registrar 等）
-2. Netlify: **Site configuration** → **Domain management** → **Add a domain**
-3. ドメインを入力 → DNS設定の指示に従う
-4. DNS に CNAME または A レコードを追加
-5. HTTPS は Netlify が自動で Let's Encrypt 証明書を発行
-6. SEOメタ情報を新しいドメインに更新
-
-### GitHub Pages でのカスタムドメイン設定（検証環境用・通常不要）
-
-1. ルートに `CNAME` ファイル作成（内容: `staging.example.com`）
-2. DNS に CNAME レコード追加: `staging.example.com → keisuke-saito25.github.io`
-3. Settings → Pages → Custom domain に入力 → Enforce HTTPS ON
+| 項目 | 設定内容 |
+|---|---|
+| **プロパティタイプ** | ドメインプロパティ |
+| **ドメイン** | `rakuup.com` |
+| **所有権確認** | DNS（TXT レコード）で確認済み |
+| **サイトマップ** | `https://rakuup.com/sitemap.xml` 送信済み（3ページ検出） |
+| **インデックス登録** | トップページをリクエスト済み（2026-04-01） |
 
 ---
 
 ## 公開前チェック
 
 - [ ] `index.html` がルート直下にあるか
+- [ ] `CNAME` ファイルがルート直下にあるか（カスタムドメイン用）
 - [ ] 画像パスが相対パスか（例: `images/hero.jpg`）
 - [ ] 画像ファイル名の大文字小文字がHTMLと一致しているか
 - [ ] フォームのアクセスキーが本番用か（Web3Forms利用時）
-- [ ] SEOメタ情報（canonical, og:url 等）が本番URL（Netlify）になっているか
-- [ ] 公開URL（検証・本番の両方）で正常表示されるか
+- [ ] SEOメタ情報（canonical, og:url 等）が本番URL（`https://rakuup.com/`）になっているか
+- [ ] `https://rakuup.com/` で正常表示されるか
 
 ---
 
@@ -176,23 +151,23 @@ Sitemap: https://raku-up.netlify.app/sitemap.xml
 
 | 症状 | 対処 |
 |---|---|
-| 404 | `index.html` がルートにあるか確認。Netlify は Publish directory が `.` か確認 |
+| 404 | `index.html` がルートにあるか確認。ブランチが `master` か確認 |
 | 画像が出ない | パスの大文字小文字を確認（GitHub Pages は区別する） |
 | 反映されない | `git push` 完了を確認 → 数分待つ → スーパーリロード |
-| Netlify ビルド失敗 | Netlify ダッシュボードの Deploys → 該当デプロイのログを確認 |
-| HTTPS が無効 | Netlify: Site configuration → Domain management → HTTPS を確認 |
+| HTTPS が無効 | GitHub Settings → Pages → Enforce HTTPS をオンにする。SSL証明書の発行に10〜30分かかる |
+| DNS check unsuccessful | ムームードメインのA/CNAMEレコードが正しいか確認。`nslookup rakuup.com 8.8.8.8` で確認 |
+| カスタムドメインが反映されない | `CNAME` ファイルがリポジトリに存在するか確認 |
 
 ---
 
-## Netlify の無料枠に関する注意
+## GitHub Pages の制限
 
-| 項目 | 無料枠 |
+| 項目 | 制限 |
 |---|---|
-| 帯域 | 100 GB/月 |
-| ビルド | 300分/月 |
-| クレジット | 300/月（デプロイ1回=15クレジット → 月約20回） |
-| Serverless Functions | 12.5万回/月 |
-| フォーム（Netlify Forms使用時） | 100件/月 |
+| リポジトリサイズ | 推奨 1GB 以下 |
+| 帯域 | 100 GB/月（ソフトリミット） |
+| デプロイ数 | 10回/時間 |
+| サイトサイズ | 推奨 1GB 以下 |
 
-> LP運用フェーズでは月数回のデプロイで十分なため、通常の利用ではクレジット上限に達することはない。
-> クレジットが50%・75%・100%に達した際にメール通知が届く。
+> LP運用フェーズでは上記制限に達することはまずない。
+> Netlifyと異なり、制限超過でサイトが自動停止されることはなく、GitHubから連絡が来る形式。

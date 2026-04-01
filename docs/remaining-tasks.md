@@ -1,6 +1,6 @@
 # Raku UP LP タスク一覧
 
-> **更新日**: 2026-03-12
+> **更新日**: 2026-04-01
 > **目的**: 楽天市場 運用代行サービス「Raku UP」のLPを Google広告 で運用し、問い合わせを獲得する
 
 ---
@@ -16,15 +16,22 @@
 - [x] フォーム送信テスト（メール受信確認済み）
 
 ### 公開環境
-- [x] 検証環境: GitHub Pages（`https://keisuke-saito25.github.io/ec_unyodaiko_lp/`）
-- [x] 本番環境: Netlify（`https://raku-up.netlify.app/`）
-- [x] SEOメタ情報を本番URL（Netlify）に更新
+- [x] ~~検証環境: GitHub Pages（`https://keisuke-saito25.github.io/ec_unyodaiko_lp/`）~~
+- [x] ~~本番環境: Netlify（`https://raku-up.netlify.app/`）~~ → **GitHub Pages に移行済み（2026-04-01）**
+- [x] 本番環境: GitHub Pages（`https://rakuup.com/`）カスタムドメイン設定済み
+- [x] SEOメタ情報を本番URL（`https://rakuup.com/`）に更新
+- [x] カスタムドメイン `rakuup.com` 設定（ムームードメイン / GitHub Pages）
+- [x] DNS設定（A レコード × 4 + CNAME）→ GitHub Pages の IP に変更済み
+- [x] SSL証明書発行 & HTTPS 強制有効化
 
 ### 計測・分析基盤
 - [x] GA4 導入（測定ID: `G-QYKKZZSQ5D`）
 - [x] CVイベント実装（フォーム送信時に `generate_lead` 自動発火）
 - [x] GA4 で `generate_lead` をキーイベント（コンバージョン）に設定
 - [x] Google Search Console 登録 + サイトマップ送信
+- [x] Google Search Console ドメインプロパティ再設定（`rakuup.com` / DNS TXTレコード認証 / 2026-04-01）
+- [x] サイトマップ再送信（3ページ検出 / 2026-04-01）
+- [x] インデックス登録リクエスト（トップページ / 2026-04-01）
 
 ### パフォーマンス最適化・CV計測
 - [x] ページ速度最適化 — CSS圧縮（66KB→48KB、約27%削減）
@@ -48,11 +55,11 @@
   - 中間ステップ（`form_start` / `step1_complete` / `step2_complete`）は **Secondary** に設定
 - [ ] **広告キャンペーンの作成・出稿**
   - 詳細は `docs/google-ads-operation-plan.md`（v4: 最終版）を参照
-  - ランディングページURLに `https://raku-up.netlify.app/` を設定
+  - ランディングページURLに `https://rakuup.com/` を設定
 
 ### 🟢 あると望ましい
-- [ ] メール送信の自前化（Netlify Functions） — メール項目名の日本語化にも対応可能
 - [ ] アクセシビリティ改善
 - [ ] 404ページ作成
-- [ ] カスタムドメイン設定
 - [ ] CSS/JSビルド自動化（GitHub Actions）
+- [x] ~~カスタムドメイン設定~~ → `rakuup.com` 設定済み（2026-04-01）
+- [x] ~~メール送信の自前化（Netlify Functions）~~ → Netlify廃止により不要。Web3Forms で運用中
