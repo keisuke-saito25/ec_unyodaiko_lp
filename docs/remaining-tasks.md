@@ -12,7 +12,7 @@
 - [x] SEO設定（title / OGP / canonical / 構造化データ / sitemap / robots.txt）
 - [x] 画像最適化（全19画像 WebP変換）
 - [x] 法務対応（特定商取引法表記 / プライバシーポリシー）
-- [x] フォーム実装（Web3Forms連携 / 受信: `rakuup@freeks.biz` / スパム対策）
+- [x] フォーム実装（Web3Forms連携 / 受信: `<masked-email>` / スパム対策）
 - [x] フォーム送信テスト（メール受信確認済み）
 
 ### 公開環境

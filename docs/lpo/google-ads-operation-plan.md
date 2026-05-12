@@ -18,7 +18,7 @@
 | CVイベント | ✅ | `generate_lead`（フォーム送信時に自動発火 → `thanks.html` へリダイレクト） |
 | GA4キーイベント設定 | ✅ | `generate_lead` をコンバージョンに設定済み |
 | Search Console | ✅ | 登録＋サイトマップ送信済み |
-| フォーム | ✅ | Web3Forms連携、受信: `rakuup@freeks.biz` |
+| フォーム | ✅ | Web3Forms連携、受信: `<masked-email>` |
 | 法務 | ✅ | 特商法表示・プライバシーポリシー完備 |
 
 ### ⬜ 未完了（広告出稿に必須）
@@ -332,10 +332,10 @@ LPのフォームで名前・メールアドレスを取得しているため、
 
 ### Phase 1: 準備（1〜3日）
 
-- [ ] Google Adsアカウント作成・初期設定
-- [ ] Auto-tagging 有効化
-- [ ] GA4 ↔ Google Adsリンク設定
-- [ ] コンバージョン（`generate_lead`）インポート → **Primary に設定**
+- [x] Google Adsアカウント作成・初期設定（2026-04-07 完了。設定記録: `google-ads-setup-log.md`）
+- [ ] Auto-tagging 有効化 ← **要確認**
+- [x] GA4 ↔ Google Adsリンク設定（2026-04-07 リンク済み: Raku UP LP 527935597）
+- [x] コンバージョン（`generate_lead`）インポート → **Primary に設定**（GA4イベント連携済み）
 - [ ] Campaign-Specific Goals で本キャンペーンの最適化対象を `generate_lead` のみに限定
 - [ ] キャンペーン・広告グループ・キーワード・広告文の入稿
 - [ ] 広告表示オプション（サイトリンク・コールアウト・構造化スニペット・ビジネス名・ロゴ・画像）設定
