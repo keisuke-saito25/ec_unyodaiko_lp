@@ -176,6 +176,11 @@ button {
   padding: var(--section-pad) 0;
 }
 
+.section-label {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
 .section-title {
   text-align: center;
   font-size: clamp(26px, 3.6vw, 38px);
@@ -559,29 +564,25 @@ button {
 
 .reason-card {
   display: flex;
-  gap: 28px;
-  align-items: flex-start;
+  gap: 36px;
+  align-items: center;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 36px;
+  padding: 40px 44px;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
 .reason-number {
   font-family: var(--font-en);
   font-weight: 900;
-  font-size: 54px;
-  line-height: 1;
-  color: rgba(191, 0, 0, .22);
+  font-size: 96px;
+  line-height: .8;
+  color: rgba(191, 0, 0, .12);
   flex-shrink: 0;
-}
-
-.reason-content {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-  flex: 1;
+  min-width: 130px;
+  text-align: center;
 }
 
 .reason-text {
@@ -598,16 +599,11 @@ button {
 .reason-text p {
   font-size: 15px;
   color: var(--text-sub);
+  max-width: 44em;
 }
 
 .reason-text strong {
   color: var(--ink);
-}
-
-.reason-image {
-  width: 240px;
-  border-radius: var(--radius);
-  flex-shrink: 0;
 }
 
 /* ===== 成功事例 ===== */
@@ -846,21 +842,15 @@ button {
 
   .reason-card {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     padding: 24px 20px;
+    align-items: flex-start;
   }
 
   .reason-number {
-    font-size: 40px;
-  }
-
-  .reason-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .reason-image {
-    width: 100%;
+    font-size: 48px;
+    min-width: 0;
+    text-align: left;
   }
 
   .reason-text h3 {
@@ -912,6 +902,11 @@ button {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+}
+
+/* 入口プラン（PHASE 1）にだけ視線の起点を作る */
+.pricing-plan-card:first-child {
+  border-top: 3px solid var(--red);
 }
 
 .pricing-plan-header {
