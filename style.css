@@ -321,16 +321,10 @@ button {
   inset: 0;
   z-index: -1;
   background: linear-gradient(90deg,
-      rgba(255, 255, 255, .97) 0%,
-      rgba(255, 255, 255, .92) 46%,
-      rgba(255, 255, 255, .6) 100%);
-}
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 56px;
-  align-items: center;
+      rgba(255, 255, 255, .96) 0%,
+      rgba(255, 255, 255, .9) 38%,
+      rgba(255, 255, 255, .45) 68%,
+      rgba(255, 255, 255, .2) 100%);
 }
 
 @keyframes rise {
@@ -365,8 +359,8 @@ button {
   animation-delay: .32s;
 }
 
-.hero-visual {
-  animation: rise .55s ease .3s both;
+.hero-content {
+  max-width: 620px;
 }
 
 .hero-eyebrow {
@@ -457,30 +451,6 @@ button {
   margin-top: 12px;
   font-size: 13px;
   color: var(--text-muted);
-}
-
-.hero-visual picture {
-  display: block;
-  background: rgba(255, 255, 255, .85);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(2px);
-}
-
-.hero-visual img {
-  border-radius: var(--radius);
-  width: 100%;
-  height: auto;
-}
-
-.hero-visual-caption {
-  margin-top: 14px;
-  font-size: 13px;
-  color: var(--text-sub);
-  text-align: center;
-  line-height: 1.7;
 }
 
 /* ===== 信頼バー ===== */
@@ -2063,17 +2033,6 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-visual {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-}
 
 @media (max-width: 768px) {
   :root {
@@ -2107,8 +2066,9 @@ input[type="checkbox"] {
 
   .hero::after {
     background: linear-gradient(180deg,
-        rgba(255, 255, 255, .96) 0%,
-        rgba(255, 255, 255, .9) 100%);
+        rgba(255, 255, 255, .94) 0%,
+        rgba(255, 255, 255, .86) 60%,
+        rgba(255, 255, 255, .78) 100%);
   }
 
   .hero-sub {
