@@ -11,6 +11,7 @@
   --gold: #D4AF37;
   --gold-light: #F0D583;
   --gold-grad: linear-gradient(120deg, #F5DE8C 0%, #D4AF37 45%, #B8860B 100%);
+  --gold-grad-deep: linear-gradient(120deg, #D4AF37 0%, #A67C00 55%, #8B6914 100%);
   --ink: #1A1A1A;
   --text-sub: #5C5955;
   --text-muted: #8A8680;
@@ -395,10 +396,13 @@ button {
   letter-spacing: .01em;
 }
 
-/* 朱のマーカー線：主役の数字にだけ引く */
+/* 主役の数字は金：成果＝金のルールをFVから宣言する */
 .hero-headline .text-red {
-  background: linear-gradient(transparent 66%, var(--red-tint) 66%);
-  padding: 0 2px;
+  background: var(--gold-grad-deep);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 6px rgba(212, 175, 55, .3));
 }
 
 .hero-headline small {
@@ -427,11 +431,11 @@ button {
   flex: 1;
   background: #fff;
   border: 1px solid var(--border);
-  border-top: 3px solid var(--red);
+  border-top: 3px solid var(--gold);
   border-radius: var(--radius);
   padding: 18px 10px 14px;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(212, 175, 55, .18);
 }
 
 .stat-number {
@@ -439,8 +443,11 @@ button {
   font-family: var(--font-en);
   font-weight: 900;
   font-size: 34px;
-  color: var(--red);
   line-height: 1.1;
+  background: var(--gold-grad-deep);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .stat-number small {
@@ -609,37 +616,9 @@ button {
   color: var(--ink);
 }
 
-/* ===== 成功事例（金×深紅のショーケース） ===== */
+/* ===== 成功事例 ===== */
 .section-cases {
-  background: linear-gradient(160deg, #221417 0%, #3D0F10 55%, #4A1212 100%);
-}
-
-.section-cases .section-title {
-  color: #fff;
-}
-
-.section-cases .section-title .text-red {
-  background: var(--gold-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.section-cases .section-title::after {
-  background: var(--gold-grad);
-  width: 64px;
-}
-
-.section-cases .section-subtitle {
-  color: rgba(255, 255, 255, .72);
-}
-
-.section-cases .en-label {
-  color: var(--gold-light);
-}
-
-.section-cases .section-cta-note {
-  color: rgba(255, 255, 255, .6);
+  background: var(--bg-warm);
 }
 
 .cases-grid {
@@ -761,8 +740,8 @@ button {
 .cases-summary {
   display: flex;
   justify-content: center;
-  gap: 88px;
-  margin-top: 64px;
+  gap: 80px;
+  margin-top: 60px;
 }
 
 .summary-item {
@@ -772,18 +751,18 @@ button {
 .summary-number {
   font-family: var(--font-en);
   font-weight: 900;
-  font-size: 60px;
+  font-size: 54px;
   line-height: 1.1;
-  background: var(--gold-grad);
+  background: var(--gold-grad-deep);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 2px 10px rgba(212, 175, 55, .35));
+  filter: drop-shadow(0 1px 6px rgba(212, 175, 55, .25));
 }
 
 .summary-number small {
   font-family: var(--font-ja);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -791,7 +770,7 @@ button {
   display: block;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, .72);
+  color: var(--text-muted);
   margin-top: 8px;
 }
 
