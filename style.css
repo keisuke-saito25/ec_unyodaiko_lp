@@ -299,8 +299,31 @@ button {
 
 /* ===== ヒーロー ===== */
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--bg);
   padding: 72px 0 88px;
+}
+
+/* 背景写真＋白グラデーションオーバーレイ（左は文字優先で濃く、右は写真を見せる） */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("images/hero-bg.webp") center / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, .97) 0%,
+      rgba(255, 255, 255, .92) 46%,
+      rgba(255, 255, 255, .6) 100%);
 }
 
 .hero-inner {
@@ -438,11 +461,12 @@ button {
 
 .hero-visual picture {
   display: block;
-  background: var(--bg-warm);
+  background: rgba(255, 255, 255, .85);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 20px;
   box-shadow: var(--shadow-md);
+  backdrop-filter: blur(2px);
 }
 
 .hero-visual img {
@@ -2075,6 +2099,16 @@ input[type="checkbox"] {
 
   .hero {
     padding: 44px 0 60px;
+  }
+
+  .hero::before {
+    background-image: url("images/hero-bg-sp.webp");
+  }
+
+  .hero::after {
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, .96) 0%,
+        rgba(255, 255, 255, .9) 100%);
   }
 
   .hero-sub {
