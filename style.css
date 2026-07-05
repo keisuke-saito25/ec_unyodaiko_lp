@@ -322,9 +322,9 @@ button {
   z-index: -1;
   background: linear-gradient(90deg,
       rgba(255, 255, 255, .96) 0%,
-      rgba(255, 255, 255, .9) 38%,
-      rgba(255, 255, 255, .45) 68%,
-      rgba(255, 255, 255, .2) 100%);
+      rgba(255, 255, 255, .9) 48%,
+      rgba(255, 255, 255, .5) 74%,
+      rgba(255, 255, 255, .22) 100%);
 }
 
 @keyframes rise {
@@ -361,6 +361,12 @@ button {
 
 .hero-content {
   max-width: 620px;
+}
+
+@media (min-width: 1100px) {
+  .hero-content {
+    margin-left: 64px;
+  }
 }
 
 .hero-eyebrow {
