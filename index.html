@@ -41,9 +41,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.min.css?v=20260407">
+  <link rel="stylesheet" href="style.css?v=dev">
 
   <!-- 構造化データ (JSON-LD) -->
   <script type="application/ld+json">
@@ -114,7 +114,7 @@
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a href="#form" class="header-cta btn btn-primary btn-sm">無料の店舗診断を申し込む</a>
+      <a href="#form" class="header-cta btn btn-primary btn-sm">無料の店舗診断</a>
     </div>
   </header>
 
@@ -127,50 +127,15 @@
     <a href="#form" class="mobile-nav-cta">申込み</a>
   </nav>
 
-  <!-- 読了プログレスバー -->
-  <div class="reading-progress" id="reading-progress">
-    <div class="reading-progress-bar" id="reading-progress-bar"></div>
-  </div>
-
   <!-- ========================================
-       モバイルスティッキーフッター
-       ======================================== -->
-  <!-- モバイルスティッキーフッター削除（固定ナビに統合済み） -->
-
-  <!-- ========================================
-       セクション1: ファーストビュー（Hero）【結果】
-       EBI法則でコピー再構成
+       ヒーロー
        ======================================== -->
   <section class="hero" id="hero">
-    <div class="hero-bg-particles" id="hero-particles"></div>
-    <div class="container">
+    <div class="container hero-inner">
       <div class="hero-content">
-        <div class="hero-badge-row">
-          <span class="badge badge-authority">元楽天ECコンサルタント監修</span>
-          <span class="badge badge-urgent">🔥 先着5社限定・残り枠わずか</span>
-        </div>
-        <div class="hero-authority-badges">
-          <picture>
-            <source srcset="images/authority-badges.webp" type="image/webp">
-            <img src="images/authority-badges.png" alt="食品EC専門・楽天市場運用実績30社+・平均売上500%UP" loading="lazy">
-          </picture>
-        </div>
-        <p class="hero-target">楽天市場の食品店舗オーナー様へ</p>
-        <p class="hero-insight">「やることが多すぎて、もう限界…」</p>
-        <h1 class="hero-headline">
-          楽天市場の運用、<br class="sp-only">全部プロに任せて<br><span class="text-gradient">本業に集中</span>しませんか？
-        </h1>
-        <p class="hero-sub">
-          食品専門・<strong>実績30社超</strong>の<br class="sp-only">元楽天ECコンサルタント所属チームが<br>商品ページ・広告・<br
-            class="sp-only">イベント対策まで丸ごと代行。
-        </p>
-        <p class="hero-price-highlight">
-          <span class="price-badge">月額<span class="price-number">5</span>万円〜</span>
-        </p>
-        <p class="hero-desc">
-          食品店舗の平均売上 <strong>500%以上UP</strong> を実現。<br>3〜6か月であなたの店舗を変えます。
-        </p>
-
+        <p class="hero-eyebrow"><span class="en-label">RAKUTEN &times; FOOD</span>楽天市場・食品カテゴリー専門の運用代行</p>
+        <h1 class="hero-headline">食品の楽天ショップ、<br>プロが運用すると<br><span class="text-red">平均売上500<small>%</small>UP</span>。</h1>
+        <p class="hero-sub">元楽天ECコンサルタント所属のチームが、商品ページ・広告運用・イベント対策まで丸ごと代行。<strong>月額5万円〜</strong>、食品カテゴリー専門だから成果につながります。</p>
         <div class="stats-row">
           <div class="stat-card">
             <span class="stat-number">30<small>社+</small></span>
@@ -181,33 +146,48 @@
             <span class="stat-label">平均売上伸長率</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number">3<small>〜</small>6<small>か月</small></span>
-            <span class="stat-label">成果実感の目安</span>
+            <span class="stat-number">5<small>万円〜</small></span>
+            <span class="stat-label">月額（税別）</span>
           </div>
         </div>
-
         <div class="hero-cta-area">
-          <a href="#form" class="btn btn-primary btn-lg btn-glow">▶ 今すぐ無料の店舗診断を申し込む</a>
-          <p class="hero-cta-note">※完全無料・営業電話なし・1分で申し込み完了</p>
+          <a href="#form" class="btn btn-primary btn-lg">無料の店舗診断を申し込む</a>
+          <p class="hero-cta-note">完全無料・営業電話なし・入力1分｜先着5社限定</p>
         </div>
       </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,40 1440,60 L1440,120 L0,120 Z" fill="var(--bg-main)" />
-      </svg>
+      <div class="hero-visual">
+        <picture>
+          <source srcset="images/diagnostic-report.webp" type="image/webp">
+          <img src="images/diagnostic-report.png" alt="無料店舗診断レポートのイメージ" width="480" height="360">
+        </picture>
+        <p class="hero-visual-caption">お申し込みいただいた方に、店舗の伸びしろが分かる<strong>診断レポート</strong>を無料でお渡しします</p>
+      </div>
     </div>
   </section>
 
   <!-- ========================================
-       セクション3: こんなお悩みありませんか？【共感】
+       信頼バー
+       ======================================== -->
+  <section class="trust-strip" id="trust" aria-label="Raku UPの強み">
+    <div class="container">
+      <ul>
+        <li class="trust-strip-item"><strong>元楽天株式会社</strong>ECコンサルタント在籍</li>
+        <li class="trust-strip-item"><strong>食品カテゴリー</strong>5年専任</li>
+        <li class="trust-strip-item"><strong>運用代行実績</strong>30社以上</li>
+        <li class="trust-strip-item"><strong>戦略から実行まで</strong>完全代行</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================
+       お悩み共感
        ======================================== -->
   <section class="section section-problems" id="problems">
     <div class="container">
-      <h2 class="section-title">楽天市場の運用、<br class="sp-only">こんなことで<br class="sp-only"><span
-          class="text-gradient">困っていませんか？</span></h2>
+      <h2 class="section-title">こんなお悩み、<br class="sp-only">ありませんか？</h2>
+      <p class="section-subtitle">楽天市場の食品店舗オーナー様から、毎月のようにいただくご相談です。</p>
       <div class="problems-grid">
-        <div class="problem-card" data-aos="fade-up">
+        <div class="problem-card">
           <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="1" x2="12" y2="23" />
@@ -215,16 +195,16 @@
             </svg></span>
           <p>売れる商品ページの<strong>作り方がわからない</strong></p>
         </div>
-        <div class="problem-card" data-aos="fade-up">
+        <div class="problem-card">
           <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10" />
               <line x1="12" y1="20" x2="12" y2="4" />
               <line x1="6" y1="20" x2="6" y2="14" />
             </svg></span>
-          <p>広告運用のやり方や分析方法がわからず、<strong>費用対効果が見えない</strong></p>
+          <p>広告の<strong>費用対効果が見えない</strong></p>
         </div>
-        <div class="problem-card" data-aos="fade-up">
+        <div class="problem-card">
           <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -232,26 +212,25 @@
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg></span>
-          <p>イベントで売上を上げる<strong>ノウハウがなく</strong>なんとなく参加している</p>
+          <p>イベントを<strong>なんとなく参加</strong>で終えている</p>
         </div>
-        <div class="problem-card" data-aos="fade-up">
-          <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-            </svg></span>
-          <p>楽天市場のアルゴリズムやSEOの知識がなく、<strong>検索順位が上がらない</strong></p>
-        </div>
-        <div class="problem-card" data-aos="fade-up">
+        <div class="problem-card">
           <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg></span>
-          <p>競合店舗と何が違うのか<br class="sp-only"><strong>分析する方法がわからない</strong></p>
+          <p>検索順位が<strong>なかなか上がらない</strong></p>
         </div>
-        <div class="problem-card" data-aos="fade-up">
+        <div class="problem-card">
+          <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg></span>
+          <p>競合との差を<strong>分析できていない</strong></p>
+        </div>
+        <div class="problem-card">
           <span class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path
@@ -259,69 +238,57 @@
               <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
               <line x1="12" y1="22.08" x2="12" y2="12" />
             </svg></span>
-          <p>商品の準備や発送対応に追われ、<strong>運用まで手が回らない</strong></p>
+          <p>発送や仕入れに追われ、<strong>運用まで手が回らない</strong></p>
         </div>
       </div>
+      <p class="problems-close">その悩み、すべて<strong>Raku UP</strong>が引き受けます。</p>
     </div>
   </section>
 
   <!-- ========================================
-       信頼バー【信頼】（共感の後に配置）
+       選ばれる3つの理由
        ======================================== -->
-  <section class="section section-trust" id="trust">
+  <section class="section section-reasons" id="reasons">
     <div class="container">
-      <h2 class="section-title">私たちの<span class="text-gradient">強み</span></h2>
-      <div class="trust-bar">
-        <div class="trust-badges" data-aos="fade-up">
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">元楽天株式会社<br>ECコンサルタント</span>
+      <h2 class="section-title">Raku UPが選ばれる<span class="text-red">3つの理由</span></h2>
+      <div class="reasons-list">
+        <div class="reason-card">
+          <div class="reason-number">01</div>
+          <div class="reason-content">
+            <div class="reason-text">
+              <h3>楽天市場 × 食品カテゴリーに完全特化</h3>
+              <p>元楽天ECコンサルタントが複数在籍。RMS・RPP・イベント対策・定期購入など、<strong>食品特有の売り方</strong>を熟知しています。汎用的な代行会社にはない、食品ジャンルの成功パターンがあります。</p>
+            </div>
+            <picture>
+              <source srcset="images/team-working.webp" type="image/webp">
+              <img src="images/team-working.png" alt="専門チームの作業イメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M12 2C6.48 2 2 6 2 10.5c0 3 2 5.5 5 7v4.5l3-2 2 0 2 0 3 2v-4.5c3-1.5 5-4 5-7C22 6 17.52 2 12 2z" />
-                <circle cx="8" cy="10" r="1" />
-                <circle cx="12" cy="8" r="1" />
-                <circle cx="16" cy="10" r="1" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">食品カテゴリー<br>5年間専任</span>
+        </div>
+        <div class="reason-card">
+          <div class="reason-number">02</div>
+          <div class="reason-content">
+            <div class="reason-text">
+              <h3>大手の10分の1のコスト</h3>
+              <p>大手EC代行会社は月額50万円〜、社員を雇えば月額30万円〜。Raku UPは<strong>月額5万円〜</strong>で、施策の実行まですべて含みます。</p>
+            </div>
+            <picture>
+              <source srcset="images/reason-cost.webp" type="image/webp">
+              <img src="images/reason-cost.png" alt="コスト比較イメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">運用代行実績<br>30社以上</span>
-          </div>
-          <div class="trust-badge-item">
-            <span class="trust-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <rect x="9" y="9" width="6" height="6" />
-                <line x1="9" y1="1" x2="9" y2="4" />
-                <line x1="15" y1="1" x2="15" y2="4" />
-                <line x1="9" y1="20" x2="9" y2="23" />
-                <line x1="15" y1="20" x2="15" y2="23" />
-                <line x1="20" y1="9" x2="23" y2="9" />
-                <line x1="20" y1="14" x2="23" y2="14" />
-                <line x1="1" y1="9" x2="4" y2="9" />
-                <line x1="1" y1="14" x2="4" y2="14" />
-              </svg>
-            </span>
-            <span class="trust-badge-text">プロによる<br>完全代行</span>
+        </div>
+        <div class="reason-card">
+          <div class="reason-number">03</div>
+          <div class="reason-content">
+            <div class="reason-text">
+              <h3>アドバイスで終わらせない</h3>
+              <p>戦略立案から施策の実行、月次レポートまで一貫して代行。質問はチャットでいつでも、<strong>回数無制限</strong>です。</p>
+            </div>
+            <picture>
+              <source srcset="images/reason-support.webp" type="image/webp">
+              <img src="images/reason-support.png" alt="完全伴走サポートイメージ" class="reason-image" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -329,128 +296,14 @@
   </section>
 
   <!-- ========================================
-       セクション4: 運用代行で「こうなります」【結果】
-       ======================================== -->
-  <section class="section section-transform" id="transform">
-    <div class="container">
-      <h2 class="section-title">運用代行に任せると、<br class="sp-only"><span class="text-gradient">こう変わります</span></h2>
-      <div class="transform-list">
-        <div class="transform-item" data-aos="fade-up">
-          <div class="transform-before">
-            <span class="transform-label label-before">Before</span>
-            <p>商品ページの更新が後回し</p>
-          </div>
-          <div class="transform-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="transform-after">
-            <span class="transform-label label-after">After</span>
-            <p>プロが毎月最適化、<strong>転換率UP</strong></p>
-          </div>
-        </div>
-        <div class="transform-item" data-aos="fade-up">
-          <div class="transform-before">
-            <span class="transform-label label-before">Before</span>
-            <p>広告費ばかりかかって利益が出ない</p>
-          </div>
-          <div class="transform-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="transform-after">
-            <span class="transform-label label-after">After</span>
-            <p>ROAS改善で<strong>広告費を抑えて売上UP</strong></p>
-          </div>
-        </div>
-        <div class="transform-item" data-aos="fade-up">
-          <div class="transform-before">
-            <span class="transform-label label-before">Before</span>
-            <p>イベント準備が間に合わない</p>
-          </div>
-          <div class="transform-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="transform-after">
-            <span class="transform-label label-after">After</span>
-            <p>事前計画〜当日対応まで<strong>全て代行</strong></p>
-          </div>
-        </div>
-        <div class="transform-item" data-aos="fade-up">
-          <div class="transform-before">
-            <span class="transform-label label-before">Before</span>
-            <p>本業に集中できない</p>
-          </div>
-          <div class="transform-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="transform-after">
-            <span class="transform-label label-after">After</span>
-            <p>楽天市場運用は丸投げ、<strong>本業に専念</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       ブレット（箇条書きベネフィット）セクション
-       ======================================== -->
-  <section class="section section-benefits" id="benefits">
-    <div class="container">
-      <h2 class="section-title">運用代行で実現する、<br class="sp-only"><span class="text-gradient">7つの成果</span></h2>
-      <p class="section-subtitle">楽天運用のプロに任せれば、あなたの店舗はこう変わります。</p>
-      <div class="benefits-list" data-aos="fade-up">
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>毎月の売上が右肩上がりに伸び、<strong>安定した収益基盤</strong>が手に入る</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>スーパーSALE・お買い物マラソンの準備に<strong>追われない</strong></p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>プロが作る商品ページで<strong>転換率が大幅に改善</strong></p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>広告費を<strong>抑えながら</strong>売上を伸ばす仕組みが完成</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>定期購入・リピーターが増え、<strong>毎月の売上予測が立つ</strong>ようになる</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>本業（仕入れ・製造・開発）に<strong>しっかり集中できる</strong>ようになる</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-check">✓</span>
-          <p>楽天のルール変更やアルゴリズム変動に<strong>振り回されなくなる</strong></p>
-        </div>
-      </div>
-    </div>
-    <div class="section-cta">
-      <a href="#form" class="btn btn-primary btn-xl btn-glow">▶ 無料の店舗診断を申し込む</a>
-    </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       セクション5: 成功事例【実証】
+       成功事例
        ======================================== -->
   <section class="section section-cases" id="results">
     <div class="container">
-      <h2 class="section-title">運用代行の<span class="text-gradient">成果</span>（一部抜粋）</h2>
+      <h2 class="section-title">導入店舗の<span class="text-red">成果</span></h2>
+      <p class="section-subtitle">食品カテゴリーでの事例です（一部抜粋）。</p>
       <div class="cases-grid">
-        <div class="case-card" data-aos="fade-up">
+        <div class="case-card">
           <div class="case-header">
             <span class="case-number">事例 01</span>
             <span class="case-category">梅干し専門店（九州）</span>
@@ -479,7 +332,7 @@
           </div>
         </div>
 
-        <div class="case-card" data-aos="fade-up">
+        <div class="case-card">
           <div class="case-header">
             <span class="case-number">事例 02</span>
             <span class="case-category">こんにゃく・もつ煮の専門店（関東）</span>
@@ -508,7 +361,7 @@
           </div>
         </div>
 
-        <div class="case-card" data-aos="fade-up">
+        <div class="case-card">
           <div class="case-header">
             <span class="case-number">事例 03</span>
             <span class="case-category">お茶専門店（中部）</span>
@@ -537,148 +390,69 @@
           </div>
         </div>
       </div>
-      <div class="cases-graph" data-aos="fade-up">
-        <h3 class="cases-graph-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" width="24" height="24"
-            style="vertical-align:-4px;margin-right:6px;">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-            <polyline points="17 6 23 6 23 12" />
-          </svg>
-          実際の売上推移（イメージ）
-        </h3>
-        <picture>
-          <source srcset="images/sales-graph.webp" type="image/webp">
-          <img src="images/sales-graph.png" alt="売上推移グラフ" class="cases-graph-image" loading="lazy">
-        </picture>
-      </div>
       <div class="cases-summary">
         <div class="summary-item">
-          <span class="summary-number">500%以上</span>
+          <span class="summary-number">500<small>%以上</small></span>
           <span class="summary-label">平均売上伸長率</span>
         </div>
         <div class="summary-item">
-          <span class="summary-number">3か月</span>
+          <span class="summary-number">3<small>か月</small></span>
           <span class="summary-label">最短改善期間</span>
         </div>
       </div>
       <div class="section-cta">
-        <a href="#form" class="btn btn-primary btn-xl btn-glow">▶ 無料の店舗診断を申し込む</a>
+        <a href="#form" class="btn btn-primary btn-xl">無料の店舗診断を申し込む</a>
+        <p class="section-cta-note">※成果は個別の実績です</p>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       セクション6: お客様の声【安心】
-       ★バラけ＋ネガティブ要素追加
-       ======================================== -->
-  <section class="section section-voices" id="voices">
-    <div class="container">
-      <h2 class="section-title">ご利用中の<span class="text-gradient">お客様の声</span></h2>
-      <div class="voices-grid">
-        <div class="voice-card" data-aos="fade-up">
-          <div class="voice-header">
-            <div class="voice-avatar">
-              <picture>
-                <source srcset="images/avatar-a.webp" type="image/webp"><img src="images/avatar-a.png" alt="Aさん">
-              </picture>
-            </div>
-            <div class="voice-meta">
-              <span class="voice-name">漬物専門店・Aさん</span>
-              <span class="voice-info">近畿・従業員3名 / 導入6か月</span>
-            </div>
-          </div>
-          <div class="voice-stars">★★★★★</div>
-          <p class="voice-text">
-            正直、最初は月額5万円でどこまでやってくれるのか<strong>半信半疑</strong>でした。<br>
-            でも1か月目から商品ページが見違えるようになり、売上も右肩上がりに。<br>今では楽天の運用は完全にお任せして、自分は新商品の開発に集中できています。
-          </p>
-        </div>
-        <div class="voice-card" data-aos="fade-up">
-          <div class="voice-header">
-            <div class="voice-avatar">
-              <picture>
-                <source srcset="images/avatar-b.webp" type="image/webp"><img src="images/avatar-b.png" alt="Bさん">
-              </picture>
-            </div>
-            <div class="voice-meta">
-              <span class="voice-name">健康食品専門店・Bさん</span>
-              <span class="voice-info">関東・従業員8名 / 導入8か月</span>
-            </div>
-          </div>
-          <div class="voice-stars">★★★★<span class="voice-star-half">★</span></div>
-          <p class="voice-text">
-            以前は大手の代行会社に<strong>月額20万円</strong>払っていましたが、正直あまり成果が出ませんでした。<br>こちらに切り替えてからは、食品に特化しているだけあって提案が的確。月額コストも大幅に下がり、売上も着実に伸びています。<br><strong>欲を言えば月次レポートがもう少し詳細だと嬉しい</strong>ですが、聞けばすぐ答えてくれるので問題ありません。
-          </p>
-        </div>
-        <div class="voice-card" data-aos="fade-up">
-          <div class="voice-header">
-            <div class="voice-avatar">
-              <picture>
-                <source srcset="images/avatar-c.webp" type="image/webp"><img src="images/avatar-c.png" alt="Cさん">
-              </picture>
-            </div>
-            <div class="voice-meta">
-              <span class="voice-name">惣菜専門店・Cさん</span>
-              <span class="voice-info">関東・夫婦で運営 / 導入4か月</span>
-            </div>
-          </div>
-          <div class="voice-stars">★★★★★</div>
-          <p class="voice-text">
-            夫婦二人で仕入れから発送まで全部やっているので、楽天の運用まで手が回りませんでした。<br>代行を頼んでからは、イベント対応も広告も全部やってくれるので本当に助かっています。<br><strong>もっと早く頼めばよかった</strong>と思っています（笑）
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       セクション7: サービス内容 + 選ばれる理由【SBE: S+B】
+       サービス内容
        ======================================== -->
   <section class="section section-service" id="service">
     <div class="container">
-      <h2 class="section-title">月額<span class="text-price">5万円〜</span>で、<br class="sp-only">ここまで<span
-          class="text-gradient">全部</span>やります</h2>
-      <p class="section-subtitle">アドバイスだけではありません。全ての施策をプロが実行・代行します。</p>
+      <h2 class="section-title">月額<span class="text-red">5万円〜</span>で、<br class="sp-only">ここまで全部やります</h2>
+      <p class="section-subtitle">アドバイスだけではありません。すべての施策をプロが実行します。</p>
       <div class="service-grid">
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10" />
               <line x1="12" y1="20" x2="12" y2="4" />
               <line x1="6" y1="20" x2="6" y2="14" />
-              <rect x="2" y="2" width="20" height="20" rx="2" opacity="0" />
             </svg></div>
           <h3>市場・競合分析</h3>
-          <p>市場トレンド把握、競合店舗の<br>価格・施策調査を毎月実施</p>
+          <p>市場トレンド把握、競合店舗の価格・施策調査を毎月実施</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
               <polyline points="17 6 23 6 23 12" />
             </svg></div>
           <h3>店舗分析</h3>
-          <p>売上・アクセス・転換率の<br>データ分析と改善施策の実行</p>
+          <p>売上・アクセス・転換率のデータ分析と改善施策の実行</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
             </svg></div>
           <h3>戦略策定・実行</h3>
-          <p>月次の販売戦略立案と全施策の<br>一貫した実行まで対応</p>
+          <p>月次の販売戦略立案と全施策の一貫した実行まで対応</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
               <path d="M13.73 21a2 2 0 0 1-3.46 0" />
             </svg></div>
           <h3>広告運用</h3>
-          <p>RPP・CPA広告の設定・最適化・<br>ROAS改善を全て代行</p>
+          <p>RPP・CPA広告の設定・最適化・ROAS改善を全て代行</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 19l7-7 3 3-7 7-3-3z" />
@@ -687,18 +461,18 @@
               <circle cx="11" cy="11" r="2" />
             </svg></div>
           <h3>画像・ページ制作</h3>
-          <p>サムネイル、バナー、商品ページ<br>LPの作成・更新を代行</p>
+          <p>サムネイル、バナー、商品ページ・LPの作成・更新を代行</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path
                 d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
             </svg></div>
           <h3>LINE運用</h3>
-          <p>友だち獲得施策、配信設計、<br>クーポン施策まで一括対応</p>
+          <p>友だち獲得施策、配信設計、クーポン施策まで一括対応</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -712,86 +486,32 @@
               <path d="M12 18h.01" />
             </svg></div>
           <h3>イベント対応</h3>
-          <p>スーパーSALE・お買い物マラソン<br>の企画〜当日まで完全代行</p>
+          <p>スーパーSALE・お買い物マラソンの企画〜当日まで完全代行</p>
         </div>
-        <div class="service-card" data-aos="fade-up">
+        <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg></div>
           <h3>質問無制限</h3>
-          <p>チャット・メールでいつでも<br>相談OK。回数制限なし</p>
-        </div>
-      </div>
-
-      <!-- 選ばれる3つの理由（サービスセクションに統合） -->
-      <h3 class="reasons-heading" data-aos="fade-up">当サービスが選ばれる<span class="text-gradient">3つの理由</span></h3>
-      <div class="reasons-list">
-        <div class="reason-card reason-card-with-image" data-aos="fade-up">
-          <div class="reason-number">01</div>
-          <div class="reason-content">
-            <div class="reason-text">
-              <h3>楽天市場 × 食品カテゴリーに<br class="sp-only">完全特化</h3>
-              <p>
-                元楽天ECコンサルタントが複数在籍。RMS、RPP、イベント対策、定期購入など<strong>食品特有の課題</strong>に精通。<br
-                  class="sp-only">汎用的な代行会社とは異なり、食品ジャンルの成功パターンを熟知しています。
-              </p>
-            </div>
-            <picture>
-              <source srcset="images/team-working.webp" type="image/webp">
-              <img src="images/team-working.png" alt="専門チームの作業イメージ" class="reason-image" loading="lazy">
-            </picture>
-          </div>
-        </div>
-        <div class="reason-card reason-card-with-image" data-aos="fade-up">
-          <div class="reason-number">02</div>
-          <div class="reason-content">
-            <div class="reason-text">
-              <h3>圧倒的な<br class="sp-only">コストパフォーマンス</h3>
-              <p>大手EC代行会社は<strong>月額50万円〜</strong>。社員を雇用すれば<strong>月額30万円〜</strong>（社保含む）。<br
-                  class="sp-only">プロに丸投げして<strong class="text-price-inline">月額5万円〜</strong>を実現。</p>
-            </div>
-            <picture>
-              <source srcset="images/reason-cost.webp" type="image/webp">
-              <img src="images/reason-cost.png" alt="コスト比較イメージ" class="reason-image" loading="lazy">
-            </picture>
-          </div>
-        </div>
-        <div class="reason-card reason-card-with-image" data-aos="fade-up">
-          <div class="reason-number">03</div>
-          <div class="reason-content">
-            <div class="reason-text">
-              <h3>「アドバイスだけ」では終わらない。<br class="sp-only">実行まで全てやります</h3>
-              <p>戦略立案から施策の実行まで一貫して代行。月次で進捗や分析結果まとめてを報告、質問はいつでも無制限に対応。<br class="sp-only"><strong>全てプロにお任せ。</strong></p>
-            </div>
-            <picture>
-              <source srcset="images/reason-support.webp" type="image/webp">
-              <img src="images/reason-support.png" alt="完全伴走サポートイメージ" class="reason-image" loading="lazy">
-            </picture>
-          </div>
+          <p>チャット・メールでいつでも相談OK。回数制限なし</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       セクション8: 料金プラン【SBE: E】
-       FAQ昇格：料金・解約情報を本文に明記
+       料金プラン
        ======================================== -->
   <section class="section section-pricing" id="pricing">
     <div class="container">
-      <h2 class="section-title"><span class="text-gradient">料金プラン</span><br class="sp-only"><small
-          style="font-size:0.5em;color:var(--text-secondary);font-weight:normal;display:inline-block;margin-top:8px;">（売上連動・ステップアップ型）</small>
-      </h2>
-      <p class="section-subtitle">店舗の成長（月商）に合わせて料金が変動する<br class="sp-only">「完全伴走型」の料金体系です。<br
-          class="sp-only">すべてのフェーズで取り組み内容は変わりません。</p>
+      <h2 class="section-title"><span class="text-red">料金プラン</span></h2>
+      <p class="section-subtitle">店舗の成長に合わせて料金が変わる、売上連動・ステップアップ型です。<br>すべてのフェーズで取り組み内容は変わりません。</p>
 
-      <!-- 売上ステップアップカード -->
       <div class="pricing-plans-grid">
-        <!-- PHASE 1 -->
-        <div class="pricing-plan-card" data-aos="fade-up">
+        <div class="pricing-plan-card">
           <div class="pricing-plan-header">
-            <span class="pricing-plan-name">PHASE 1 (初期)</span>
+            <span class="pricing-plan-name">PHASE 1（初期）</span>
             <div class="pricing-plan-price">
               <span class="pricing-plan-currency">月額</span>
               <span class="pricing-plan-amount">5<small>万円</small></span>
@@ -810,10 +530,9 @@
           </div>
         </div>
 
-        <!-- PHASE 2 -->
-        <div class="pricing-plan-card" data-aos="fade-up">
+        <div class="pricing-plan-card">
           <div class="pricing-plan-header">
-            <span class="pricing-plan-name">PHASE 2 (成長期)</span>
+            <span class="pricing-plan-name">PHASE 2（成長期）</span>
             <div class="pricing-plan-price">
               <span class="pricing-plan-currency">月額</span>
               <span class="pricing-plan-amount">7<small>万円</small></span>
@@ -832,10 +551,9 @@
           </div>
         </div>
 
-        <!-- PHASE 3 -->
-        <div class="pricing-plan-card" data-aos="fade-up">
+        <div class="pricing-plan-card">
           <div class="pricing-plan-header">
-            <span class="pricing-plan-name">PHASE 3 (拡大期)</span>
+            <span class="pricing-plan-name">PHASE 3（拡大期）</span>
             <div class="pricing-plan-price">
               <span class="pricing-plan-currency">月額</span>
               <span class="pricing-plan-amount">15<small>万円〜</small></span>
@@ -855,7 +573,7 @@
         </div>
       </div>
 
-      <div class="pricing-common-info" data-aos="fade-up">
+      <div class="pricing-common-info">
         <div class="pricing-detail-item">
           <span class="detail-label">初期費用</span>
           <span class="detail-value free">なし</span>
@@ -870,15 +588,15 @@
         </div>
       </div>
 
-      <h3 class="compare-title" data-aos="fade-up">他社との比較</h3>
-      <div class="pricing-compare" data-aos="fade-up">
+      <h3 class="compare-title">他社との比較</h3>
+      <div class="pricing-compare">
         <table class="compare-table">
           <thead>
             <tr>
               <th></th>
               <th>大手EC代行A社</th>
               <th>一般的な代行B社</th>
-              <th class="highlight-col">当サービス</th>
+              <th class="highlight-col">Raku UP</th>
             </tr>
           </thead>
           <tbody>
@@ -916,19 +634,82 @@
         </table>
       </div>
       <div class="section-cta">
-        <a href="#form" class="btn btn-primary btn-xl btn-glow">▶ 無料の店舗診断を申し込む</a>
+        <a href="#form" class="btn btn-primary btn-xl">無料の店舗診断を申し込む</a>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       セクション9: ご利用の流れ
+       お客様の声
+       ======================================== -->
+  <section class="section section-voices" id="voices">
+    <div class="container">
+      <h2 class="section-title">ご利用中の<span class="text-red">お客様の声</span></h2>
+      <div class="voices-grid">
+        <div class="voice-card">
+          <div class="voice-header">
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-a.webp" type="image/webp"><img src="images/avatar-a.png" alt="Aさん">
+              </picture>
+            </div>
+            <div class="voice-meta">
+              <span class="voice-name">漬物専門店・Aさん</span>
+              <span class="voice-info">近畿・従業員3名 / 導入6か月</span>
+            </div>
+          </div>
+          <div class="voice-stars">★★★★★</div>
+          <p class="voice-text">
+            正直、最初は月額5万円でどこまでやってくれるのか<strong>半信半疑</strong>でした。<br>
+            でも1か月目から商品ページが見違えるようになり、売上も右肩上がりに。<br>今では楽天の運用は完全にお任せして、自分は新商品の開発に集中できています。
+          </p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-header">
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-b.webp" type="image/webp"><img src="images/avatar-b.png" alt="Bさん">
+              </picture>
+            </div>
+            <div class="voice-meta">
+              <span class="voice-name">健康食品専門店・Bさん</span>
+              <span class="voice-info">関東・従業員8名 / 導入8か月</span>
+            </div>
+          </div>
+          <div class="voice-stars">★★★★<span class="voice-star-half">★</span></div>
+          <p class="voice-text">
+            以前は大手の代行会社に<strong>月額20万円</strong>払っていましたが、正直あまり成果が出ませんでした。<br>こちらに切り替えてからは、食品に特化しているだけあって提案が的確。月額コストも大幅に下がり、売上も着実に伸びています。<br><strong>欲を言えば月次レポートがもう少し詳細だと嬉しい</strong>ですが、聞けばすぐ答えてくれるので問題ありません。
+          </p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-header">
+            <div class="voice-avatar">
+              <picture>
+                <source srcset="images/avatar-c.webp" type="image/webp"><img src="images/avatar-c.png" alt="Cさん">
+              </picture>
+            </div>
+            <div class="voice-meta">
+              <span class="voice-name">惣菜専門店・Cさん</span>
+              <span class="voice-info">関東・夫婦で運営 / 導入4か月</span>
+            </div>
+          </div>
+          <div class="voice-stars">★★★★★</div>
+          <p class="voice-text">
+            夫婦二人で仕入れから発送まで全部やっているので、楽天の運用まで手が回りませんでした。<br>代行を頼んでからは、イベント対応も広告も全部やってくれるので本当に助かっています。<br><strong>もっと早く頼めばよかった</strong>と思っています（笑）
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ご利用の流れ
        ======================================== -->
   <section class="section section-flow" id="flow">
     <div class="container">
-      <h2 class="section-title">ご利用の流れ（<span class="text-gradient">3ステップ</span>で開始）</h2>
+      <h2 class="section-title">ご利用の流れ（<span class="text-red">3ステップ</span>）</h2>
       <div class="flow-steps">
-        <div class="flow-step" data-aos="fade-up">
+        <div class="flow-step">
           <div class="flow-step-number">
             <span>STEP</span>
             <strong>1</strong>
@@ -949,7 +730,7 @@
           </div>
         </div>
         <div class="flow-connector"></div>
-        <div class="flow-step" data-aos="fade-up">
+        <div class="flow-step">
           <div class="flow-step-number">
             <span>STEP</span>
             <strong>2</strong>
@@ -970,7 +751,7 @@
           </div>
         </div>
         <div class="flow-connector"></div>
-        <div class="flow-step" data-aos="fade-up">
+        <div class="flow-step">
           <div class="flow-step-number">
             <span>STEP</span>
             <strong>3</strong>
@@ -995,13 +776,13 @@
   </section>
 
   <!-- ========================================
-       セクション10: FAQ（絞り込み：重複削除済み）
+       よくある質問
        ======================================== -->
   <section class="section section-faq" id="faq">
     <div class="container">
       <h2 class="section-title">よくある質問</h2>
       <div class="faq-list">
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>診断は本当に無料ですか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1013,7 +794,7 @@
             <p>はい、完全無料です。診断後に無理な勧誘もありません。</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>具体的に何を代行してくれますか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1025,7 +806,7 @@
             <p>商品ページ制作、広告運用、イベント対応、LINE運用など楽天運営業務を丸ごと代行します。詳しくは<a href="#service">サービス内容</a>をご覧ください。</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>店舗オーナーは何をすればいいですか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1037,7 +818,7 @@
             <p>基本的には商品の仕入れ・製造・発送に集中いただければOKです。楽天の運用は全てお任せください。</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>月商が少なくても大丈夫ですか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1049,7 +830,7 @@
             <p>月商の制限はありません。月商3万円から始めて月商1,000万円になった事例もあります。</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>食品以外でも対応していますか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1061,7 +842,7 @@
             <p>現在は食品カテゴリーを専門としており、食品に特化しているからこそ高い成果を出せています。ただし、カテゴリーによっては食品で培ったノウハウが活かせる場合もございますので、まずはお気軽にご相談ください。</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up">
+        <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>地方の小規模事業者ですが大丈夫ですか？</span>
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1078,93 +859,16 @@
   </section>
 
   <!-- ========================================
-       セクション12: 限定性【クロージング】
-       ======================================== -->
-  <section class="section section-urgency" id="urgency">
-    <div class="container">
-      <div class="urgency-box" data-aos="fade-up">
-        <span class="urgency-badge">⚠️ 重要なお知らせ</span>
-        <h2>【重要】先着<span class="urgency-number">5社</span>限定の運用代行枠です</h2>
-        <p class="urgency-reason">一社当たりの運用に専念するため、<br class="sp-only">品質担保の観点から新規の運用は毎月5社が限界です。</p>
-        <div class="urgency-remaining">
-          <span class="remaining-label">毎月の残り枠</span>
-          <span class="remaining-number">2社</span>
-        </div>
-        <p class="urgency-note">定員に達し次第、予告なく募集を終了させていただく場合がございます。</p>
-        <a href="#form" class="btn btn-primary btn-lg btn-glow">▶ 今すぐ無料の店舗診断を申し込む</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       なぜ無料で診断するのか？【安心補強】（フォーム直前に配置）
-       ======================================== -->
-  <section class="section section-why-free" id="why-free">
-    <div class="container">
-      <h2 class="section-title">なぜ<span class="text-gradient">無料</span>で店舗診断を提供するのか？</h2>
-      <p class="section-subtitle">「本当に無料なの？」「あとから費用が発生するのでは？」<br class="sp-only">そう思うのは当然です。理由をご説明します。</p>
-      <div class="why-free-list">
-        <div class="why-free-item" data-aos="fade-up">
-          <div class="why-free-number">1</div>
-          <div class="why-free-content">
-            <h3>実績を積み上げたい</h3>
-            <p>より多くの食品店舗さまの成功事例を作り、信頼いただけるサービスに成長させたいと考えています。</p>
-          </div>
-        </div>
-        <div class="why-free-item" data-aos="fade-up">
-          <div class="why-free-number">2</div>
-          <div class="why-free-content">
-            <h3>成果でお応えしたい</h3>
-            <p>実際に売上が伸びれば、継続していただけると確信しています。だからまずは成果で証明します。</p>
-          </div>
-        </div>
-        <div class="why-free-item" data-aos="fade-up">
-          <div class="why-free-number">3</div>
-          <div class="why-free-content">
-            <h3>地域の事業者さまの成長を支援したい</h3>
-            <p>地域で頑張る事業者さまの成長を直接支援したい。それが私たちの原動力です。</p>
-          </div>
-        </div>
-      </div>
-      <div class="guarantee-badges">
-        <div class="guarantee-badge">
-          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg></span>
-          <span>無料診断に費用請求は一切なし</span>
-        </div>
-        <div class="guarantee-badge">
-          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg></span>
-          <span>無理な営業・勧誘は一切なし</span>
-        </div>
-        <div class="guarantee-badge">
-          <span class="guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg></span>
-          <span>診断後の契約強要は一切なし</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       申込フォーム【ステップ化】
+       診断オファー＋申込フォーム
        ======================================== -->
   <section class="section section-form" id="form">
     <div class="container">
-      <h2 class="section-title">無料の店舗診断<br class="sp-only"> <span class="text-gradient">お申し込みフォーム</span></h2>
-      <p class="section-subtitle">3営業日以内にご連絡いたします</p>
+      <p class="offer-urgency">品質担保のため新規受付は<strong>毎月5社まで</strong>。今月の残り枠 <strong class="text-red">2社</strong></p>
+      <h2 class="section-title">まずは、<span class="text-red">無料の店舗診断</span>から</h2>
+      <p class="section-subtitle">お申し込みから3営業日以内にご連絡します。<br>成果を実感いただいた上で継続をご判断いただきたいので、診断は無料です。</p>
 
-      <!-- 診断で分かること（マイクロコピー） -->
-      <div class="form-benefits-with-image" data-aos="fade-up">
+      <!-- 診断で分かること -->
+      <div class="form-benefits-with-image">
         <div class="form-benefits-image">
           <picture>
             <source srcset="images/diagnostic-report.webp" type="image/webp">
@@ -1172,13 +876,19 @@
           </picture>
         </div>
         <div class="form-benefits">
-          <h3>📋 無料診断で分かる3つのこと</h3>
+          <h3>無料診断で分かる3つのこと</h3>
           <ul>
             <li>あなたの店舗の<strong>売上ポテンシャル</strong></li>
             <li>競合店舗との<strong>差分と改善余地</strong></li>
             <li>すぐに実行できる<strong>具体的な改善施策3つ以上</strong></li>
           </ul>
         </div>
+      </div>
+
+      <div class="assurance-row">
+        <span class="assurance-item">費用請求は一切なし</span>
+        <span class="assurance-item">営業・勧誘は一切なし</span>
+        <span class="assurance-item">契約の強要は一切なし</span>
       </div>
 
       <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -1317,8 +1027,8 @@
 
             <div class="step-btn-row">
               <button type="button" class="btn btn-outline step-prev-btn" data-prev="2">← 戻る</button>
-              <button type="submit" class="btn btn-primary btn-lg btn-glow" id="submit-btn" disabled>
-                ▶ 無料の店舗診断を申し込む
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-btn" disabled>
+                無料の店舗診断を申し込む
               </button>
             </div>
           </div>
@@ -1327,7 +1037,11 @@
 
       <!-- 送信完了メッセージ -->
       <div id="form-success" class="form-success" style="display:none;">
-        <div class="success-icon">✅</div>
+        <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            width="48" height="48" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l3 3 5-6" />
+          </svg></div>
         <h3>お申し込みありがとうございます！</h3>
         <p>3営業日以内にご連絡いたします。<br>しばらくお待ちください。</p>
       </div>
@@ -1339,7 +1053,7 @@
        ======================================== -->
   <section class="section section-legal" id="legal">
     <div class="container">
-      <details class="legal-details" data-aos="fade-up">
+      <details class="legal-details">
         <summary class="legal-summary">特定商取引法に基づく表記</summary>
         <div class="legal-content">
           <table class="legal-table">
@@ -1407,7 +1121,6 @@
     </div>
   </section>
 
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -1424,13 +1137,14 @@
           <a href="privacy.html">プライバシーポリシー</a>
         </div>
         <div class="footer-bottom">
+          <p class="footer-independence">Raku UPは freeks株式会社が運営する、楽天グループとは独立した運用代行サービスです。</p>
           <p>&copy; 2026 Raku UP All Rights Reserved.</p>
           <p class="footer-disclaimer">※ 掲載の成果事例は個別の実績であり、全てのお客様に同等の結果を保証するものではありません。</p>
         </div>
       </div>
   </footer>
 
-  <script src="script.min.js?v=20260407"></script>
+  <script src="script.js?v=dev"></script>
 </body>
 
 </html>
