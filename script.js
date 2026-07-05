@@ -5,11 +5,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
-  initReadingProgress();
   initMobileNav();
   initFAQ();
   initScrollAnimations();
-  initParticles();
   initSmoothScroll();
   initForm();
   initStepForm();
@@ -33,25 +31,6 @@ function initHeader() {
 
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
-}
-
-
-/* ========================================
-   読了プログレスバー
-   ======================================== */
-function initReadingProgress() {
-  const bar = document.getElementById('reading-progress-bar');
-  if (!bar) return;
-
-  const updateProgress = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = `${Math.min(progress, 100)}%`;
-  };
-
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  updateProgress();
 }
 
 
@@ -154,44 +133,6 @@ function initScrollAnimations() {
 
 
 /* ========================================
-   パーティクル（Hero背景）
-   ======================================== */
-function initParticles() {
-  const container = document.getElementById('hero-particles');
-  if (!container) return;
-
-  const particleCount = 20;
-  const colors = [
-    'rgba(230, 57, 70, 0.3)',
-    'rgba(255, 140, 66, 0.3)',
-    'rgba(255, 255, 255, 0.15)',
-    'rgba(230, 57, 70, 0.15)',
-  ];
-
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-
-    const size = Math.random() * 6 + 2;
-    const x = Math.random() * 100;
-    const duration = Math.random() * 15 + 10;
-    const delay = Math.random() * 15;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.left = `${x}%`;
-    particle.style.bottom = '-10px';
-    particle.style.background = color;
-    particle.style.animationDuration = `${duration}s`;
-    particle.style.animationDelay = `${delay}s`;
-
-    container.appendChild(particle);
-  }
-}
-
-
-/* ========================================
    スムーズスクロール
    ======================================== */
 function initSmoothScroll() {
@@ -283,7 +224,7 @@ function initForm() {
     } catch (error) {
       alert('送信に失敗しました。お手数ですが時間をおいてもう一度お試しください。');
       submitBtn.disabled = false;
-      submitBtn.textContent = '▶ 無料の店舗診断を申し込む';
+      submitBtn.textContent = '無料の店舗診断を申し込む';
     }
   });
 }
