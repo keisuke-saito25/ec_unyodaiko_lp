@@ -8,6 +8,9 @@
   --red: #BF0000;
   --red-dark: #8F0000;
   --red-tint: #FBEDED;
+  --gold: #D4AF37;
+  --gold-light: #F0D583;
+  --gold-grad: linear-gradient(120deg, #F5DE8C 0%, #D4AF37 45%, #B8860B 100%);
   --ink: #1A1A1A;
   --text-sub: #5C5955;
   --text-muted: #8A8680;
@@ -606,9 +609,37 @@ button {
   color: var(--ink);
 }
 
-/* ===== 成功事例 ===== */
+/* ===== 成功事例（金×深紅のショーケース） ===== */
 .section-cases {
-  background: var(--bg-warm);
+  background: linear-gradient(160deg, #221417 0%, #3D0F10 55%, #4A1212 100%);
+}
+
+.section-cases .section-title {
+  color: #fff;
+}
+
+.section-cases .section-title .text-red {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-cases .section-title::after {
+  background: var(--gold-grad);
+  width: 64px;
+}
+
+.section-cases .section-subtitle {
+  color: rgba(255, 255, 255, .72);
+}
+
+.section-cases .en-label {
+  color: var(--gold-light);
+}
+
+.section-cases .section-cta-note {
+  color: rgba(255, 255, 255, .6);
 }
 
 .cases-grid {
@@ -687,7 +718,7 @@ button {
 }
 
 .case-metric-value.highlight {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 900;
   color: var(--red);
 }
@@ -700,12 +731,13 @@ button {
 .case-badge {
   align-self: center;
   margin-top: 10px;
-  background: var(--red-tint);
-  color: var(--red);
+  background: var(--gold-grad);
+  color: #4A3608;
   font-size: 12px;
   font-weight: 700;
-  padding: 4px 14px;
+  padding: 4px 16px;
   border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, .35);
 }
 
 .case-details {
@@ -729,8 +761,8 @@ button {
 .cases-summary {
   display: flex;
   justify-content: center;
-  gap: 72px;
-  margin-top: 56px;
+  gap: 88px;
+  margin-top: 64px;
 }
 
 .summary-item {
@@ -740,22 +772,27 @@ button {
 .summary-number {
   font-family: var(--font-en);
   font-weight: 900;
-  font-size: 44px;
-  color: var(--red);
+  font-size: 60px;
   line-height: 1.1;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(212, 175, 55, .35));
 }
 
 .summary-number small {
   font-family: var(--font-ja);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .summary-label {
   display: block;
   font-size: 13px;
-  color: var(--text-muted);
-  margin-top: 6px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .72);
+  margin-top: 8px;
 }
 
 /* ===== サービス内容 ===== */
@@ -859,11 +896,15 @@ button {
 
   .cases-summary {
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 44px;
   }
 
   .summary-number {
-    font-size: 36px;
+    font-size: 42px;
+  }
+
+  .summary-number small {
+    font-size: 15px;
   }
 
   .service-grid {
@@ -1131,8 +1172,8 @@ button {
 }
 
 .voice-stars {
-  color: var(--red);
-  font-size: 14px;
+  color: var(--gold);
+  font-size: 15px;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -1325,12 +1366,17 @@ button {
   width: fit-content;
   margin: 0 auto 36px;
   text-align: center;
-  background: #fff;
-  border: 1px solid var(--red);
+  background: var(--red);
+  color: #fff;
   border-radius: 999px;
-  padding: 10px 26px;
+  padding: 11px 28px;
   font-size: 14px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 6px 20px rgba(191, 0, 0, .3);
+}
+
+.offer-urgency .text-red {
+  color: var(--gold-light);
+  font-size: 1.15em;
 }
 
 .form-benefits-with-image {
