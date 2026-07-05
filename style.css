@@ -421,29 +421,28 @@ button {
   color: var(--ink);
 }
 
+/* 箱をやめたエディトリアル表記：金の縦罫＋ラベル上・数字下 */
 .stats-row {
   display: flex;
-  gap: 14px;
-  margin-top: 32px;
+  gap: 44px;
+  margin-top: 36px;
 }
 
 .stat-card {
-  flex: 1;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--gold);
-  border-radius: var(--radius);
-  padding: 18px 10px 14px;
-  text-align: center;
-  box-shadow: 0 2px 12px rgba(212, 175, 55, .18);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  border-left: 2px solid var(--gold);
+  padding: 4px 0 4px 18px;
+  text-align: left;
 }
 
 .stat-number {
   display: block;
   font-family: var(--font-en);
   font-weight: 900;
-  font-size: 34px;
-  line-height: 1.1;
+  font-size: 40px;
+  line-height: 1.05;
   background: var(--gold-grad-deep);
   -webkit-background-clip: text;
   background-clip: text;
@@ -453,15 +452,15 @@ button {
 .stat-number small {
   font-family: var(--font-ja);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .stat-label {
   display: block;
-  margin-top: 6px;
   font-size: 12px;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: var(--text-sub);
 }
 
 .hero-cta-area {
@@ -518,40 +517,74 @@ button {
   background: var(--bg-warm);
 }
 
-.problems-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.problem-card {
+/* 帳票風セルフチェックシート */
+.check-sheet {
+  max-width: 880px;
+  margin: 0 auto;
   background: #fff;
   border: 1px solid var(--border);
+  border-top: 3px solid var(--ink);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 28px 44px 20px;
   box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 }
 
-.problem-icon {
-  color: var(--red);
+.check-sheet-head {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 
-.problem-icon svg {
-  width: 38px;
-  height: 38px;
-}
-
-.problem-card p {
+.check-list li {
+  position: relative;
+  padding: 17px 0 17px 40px;
+  border-bottom: 1px dashed var(--border);
   font-size: 15px;
   color: var(--text-sub);
   line-height: 1.7;
 }
 
-.problem-card strong {
+.check-list li strong {
   color: var(--ink);
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #C9C4BE;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.check-list li::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 24px;
+  width: 13px;
+  height: 8px;
+  border-left: 2.5px solid var(--red);
+  border-bottom: 2.5px solid var(--red);
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .check-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 56px;
+  }
+
+  .check-list li:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
 }
 
 .problems-close {
@@ -819,10 +852,6 @@ button {
 
 /* ===== 中盤セクションのレスポンシブ ===== */
 @media (max-width: 900px) {
-  .problems-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .cases-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
@@ -835,20 +864,30 @@ button {
 }
 
 @media (max-width: 768px) {
-  .problems-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .check-sheet {
+    padding: 20px 20px 12px;
   }
 
-  .problem-card {
-    flex-direction: row;
-    align-items: center;
-    padding: 18px 20px;
+  .check-list li {
+    font-size: 14px;
+    padding: 14px 0 14px 34px;
   }
 
-  .problem-icon svg {
-    width: 30px;
-    height: 30px;
+  .check-list li::before {
+    top: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .check-list li::after {
+    left: 7px;
+    top: 20px;
+    width: 12px;
+    height: 7px;
+  }
+
+  .check-list li:last-child {
+    border-bottom: none;
   }
 
   .problems-close {
@@ -911,7 +950,37 @@ button {
 .pricing-plans-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ステップアップ型を形で語る：階段状の配置＋金の矢印 */
+@media (min-width: 901px) {
+  .pricing-plan-card {
+    position: relative;
+  }
+
+  .pricing-plan-card:nth-child(1) {
+    margin-top: 56px;
+  }
+
+  .pricing-plan-card:nth-child(2) {
+    margin-top: 28px;
+  }
+
+  .pricing-plan-card:nth-child(2)::before,
+  .pricing-plan-card:nth-child(3)::before {
+    content: "\00BB";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-en);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--gold);
+  }
 }
 
 .pricing-plan-card {
@@ -930,17 +999,25 @@ button {
 }
 
 .pricing-plan-header {
-  padding: 26px 20px 22px;
+  padding: 26px 20px 0;
   border-bottom: 1px solid var(--border);
   text-align: center;
 }
 
+/* 印風のフェーズタグ */
 .pricing-plan-name {
-  display: block;
-  font-size: 13px;
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: .04em;
-  color: var(--red);
+  letter-spacing: .06em;
+  padding: 4px 14px;
+  border-radius: 3px;
+}
+
+.pricing-plan-card:first-child .pricing-plan-name {
+  background: var(--red);
 }
 
 .pricing-plan-price {
@@ -976,15 +1053,22 @@ button {
   color: var(--text-muted);
 }
 
+/* 帳票の条件行 */
 .pricing-plan-target {
-  display: inline-block;
-  margin-top: 12px;
-  background: var(--red-tint);
-  color: var(--red);
+  display: block;
+  margin: 18px -20px 0;
+  padding: 8px 8px;
+  background: var(--bg-warm);
+  border-top: 1px dashed var(--border);
+  color: var(--text-sub);
   font-size: 12px;
   font-weight: 700;
-  padding: 3px 14px;
-  border-radius: 999px;
+  letter-spacing: .04em;
+}
+
+.pricing-plan-target::before {
+  content: "対象：";
+  color: var(--text-muted);
 }
 
 .pricing-plan-body {
@@ -2102,11 +2186,19 @@ input[type="checkbox"] {
   }
 
   .stats-row {
-    gap: 8px;
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding-left: 12px;
   }
 
   .stat-number {
-    font-size: 26px;
+    font-size: 25px;
+  }
+
+  .stat-number small {
+    font-size: 11px;
   }
 
   .stat-label {
