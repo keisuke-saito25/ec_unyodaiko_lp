@@ -29,9 +29,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.min.css?v=20260312">
+  <link rel="stylesheet" href="style.css?v=dev">
 
   <style>
     /* サンクスページ固有スタイル */
@@ -41,13 +41,14 @@
       align-items: center;
       justify-content: center;
       padding: 80px 0 60px;
-      background: var(--bg-main);
+      background: var(--bg-warm);
     }
 
     .thanks-card {
-      background: var(--bg-white);
-      border-radius: var(--border-radius-lg);
-      box-shadow: var(--shadow-lg);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
       max-width: 640px;
       width: 100%;
       margin: 0 auto;
@@ -70,13 +71,13 @@
     .thanks-icon {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      background: var(--red);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 24px;
-      box-shadow: 0 8px 30px var(--primary-glow);
+      box-shadow: 0 8px 30px rgba(191, 0, 0, .25);
     }
 
     .thanks-icon svg {
@@ -89,22 +90,22 @@
 
     .thanks-title {
       font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--text-primary);
+      font-weight: 900;
+      color: var(--ink);
       margin-bottom: 12px;
       line-height: 1.4;
     }
 
     .thanks-subtitle {
       font-size: 1.1rem;
-      color: var(--text-secondary);
+      color: var(--text-sub);
       margin-bottom: 40px;
       line-height: 1.8;
     }
 
     .thanks-steps {
-      background: var(--bg-light);
-      border-radius: var(--border-radius);
+      background: var(--bg-warm);
+      border-radius: var(--radius);
       padding: 28px 32px;
       text-align: left;
       margin-bottom: 40px;
@@ -113,7 +114,7 @@
     .thanks-steps h3 {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--text-primary);
+      color: var(--ink);
       margin-bottom: 16px;
       display: flex;
       align-items: center;
@@ -123,7 +124,7 @@
     .thanks-steps h3 svg {
       width: 20px;
       height: 20px;
-      stroke: var(--primary);
+      stroke: var(--red);
       stroke-width: 2;
       fill: none;
       flex-shrink: 0;
@@ -144,7 +145,7 @@
     .thanks-step-num {
       width: 28px;
       height: 28px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      background: var(--red);
       color: white;
       border-radius: 50%;
       display: flex;
@@ -158,13 +159,13 @@
 
     .thanks-step-text {
       font-size: 0.95rem;
-      color: var(--text-secondary);
+      color: var(--text-sub);
       line-height: 1.6;
       padding-top: 3px;
     }
 
     .thanks-step-text strong {
-      color: var(--text-primary);
+      color: var(--ink);
     }
 
     .thanks-cta {

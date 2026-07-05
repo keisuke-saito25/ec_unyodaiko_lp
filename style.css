@@ -1754,6 +1754,111 @@ input[type="checkbox"] {
   color: var(--text-sub);
 }
 
+/* ===== サブページ（privacy / thanks 共通） ===== */
+.pp-header .header-inner {
+  justify-content: space-between;
+}
+
+.pp-main {
+  background: var(--bg-warm);
+  padding: 56px 0 72px;
+}
+
+.pp-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 44px;
+  box-shadow: var(--shadow-sm);
+}
+
+.pp-title {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.pp-updated {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.pp-intro {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 32px;
+}
+
+.pp-section {
+  margin-bottom: 28px;
+}
+
+.pp-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.pp-num {
+  color: var(--red);
+  font-family: var(--font-en);
+}
+
+.pp-section p {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 8px;
+}
+
+.pp-section a {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.pp-table th {
+  width: 36%;
+  text-align: left;
+  vertical-align: top;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+
+.pp-table td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  color: var(--text-sub);
+}
+
+.pp-address-box {
+  background: var(--bg-warm);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .pp-content {
+    padding: 28px 20px;
+  }
+}
+
 /* ===== フッター ===== */
 .site-footer {
   background: var(--ink);
@@ -1787,9 +1892,15 @@ input[type="checkbox"] {
 .footer-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   font-size: 13px;
   color: #D9D4CE;
+  margin-top: 16px;
+}
+
+.footer-content .footer-links {
+  margin-top: 0;
 }
 
 .footer-links a:hover {
@@ -1803,9 +1914,16 @@ input[type="checkbox"] {
 .footer-bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 6px;
   font-size: 12px;
   color: #8A8680;
+  margin-top: 16px;
+}
+
+.footer-content .footer-bottom {
+  margin-top: 0;
 }
 
 .footer-independence {
@@ -1938,7 +2056,7 @@ input[type="checkbox"] {
     --section-pad: 60px;
   }
 
-  body {
+  body:has(.mobile-fixed-nav) {
     padding-bottom: 47px;
   }
 
