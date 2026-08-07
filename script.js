@@ -255,9 +255,19 @@ function initForm() {
 
     try {
       const formData = new FormData(form);
+      // multipart送信だとWeb3Forms側で日本語の項目名が文字化けするためJSONで送信する
+      const payload = {};
+      formData.forEach((value, key) => {
+        if (key === 'ご希望のサービス[]') {
+          payload['ご希望のサービス'] = formData.getAll(key).join(', ');
+        } else {
+          payload[key] = value;
+        }
+      });
       const response = await fetch(form.action, {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
