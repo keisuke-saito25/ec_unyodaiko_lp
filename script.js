@@ -209,8 +209,8 @@ function initForm() {
           gtag('event', 'generate_lead', {
             event_category: 'form',
             event_label: 'free_diagnosis',
-            monthly_sales: formData.get('monthly_sales') || '',
-            desired_services: formData.getAll('desired_services[]').join(', ') || ''
+            monthly_sales: formData.get('月商') || '',
+            desired_services: formData.getAll('ご希望のサービス[]').join(', ') || ''
           });
         }
 
@@ -284,7 +284,7 @@ function initStepForm() {
             });
           } else if (currentStep.id === 'step-2') {
             const checkedServices = Array.from(
-              currentStep.querySelectorAll('input[name="desired_services[]"]:checked')
+              currentStep.querySelectorAll('input[name="ご希望のサービス[]"]:checked')
             ).map(cb => cb.value);
             gtag('event', 'step2_complete', {
               event_category: 'form',
